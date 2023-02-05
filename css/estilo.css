@@ -1,0 +1,425 @@
+/***** ESTILO GENERAL DEL SITIO WEB *****/
+* { 
+	/* Medidas Resets de las páginas */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body { 
+	/* Estilos y Configs del Body */
+	font-family: 'Figtree', sans-serif;
+	background-color:#f8f8ff; /*#F9F8E5 ; #F4F2D0*/
+	line-height: 1.7em;
+	/* Config para el Footer al Píe de la Página */
+	display: flex; 
+	flex-direction: column;
+	min-height: 100vh;
+	/* Estilo del fondo de la página */
+	background-image: url(../multimedia/shattered.png);
+	background-attachment: fixed;
+}
+.italic {
+	/* Spans en formato Italic */
+	font-style: italic;
+}
+.bold {
+	/* Spans en formato Bold */
+	font-weight: bold;
+}
+
+/***** ESTILO GENERAL DEL NAV *****/
+.header__nav {
+	/* Configs del NavBar */
+	font-size: 16px;
+	display: flex;
+	justify-content: end;
+	background: #045CAC;
+}
+.header__nav ul {
+	/* Config de la listas */
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	/* Estilos de los enlaces */
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Oswald', sans-serif;
+}
+.header__nav a > img {
+	/* Configs de la Imagen */
+	display: flex;
+	align-items: center;
+}
+.header__nav li {
+	/* Config de los elementos de la lista visible */
+	line-height: 4em;
+	position: relative;
+	transition: 0.5s;
+}
+.header__nav li ul {
+	/* Config de los elementos de la lista desplegable */
+	display: block;
+	position: absolute;
+	z-index: 1;
+	text-transform: none;
+}
+.header__nav a{
+	/* Config de los links de la lista visible */
+	color: #fff;
+	display: inline-block;
+	padding: 0 20px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.header__nav li i{
+	/* Config de los íconos de la lista visible */
+	margin-left: 3px;
+	margin-right: 1.1em;
+	width: 7px;
+	color: #e2c713;
+}
+.header__nav li:hover {
+	/* Animación de los elementos de la lista visible */
+	background-color: #fff;
+}
+.header__nav a:hover {
+	/* Animación de los links de la lista visible y desplegable*/
+	color: #000;
+}
+
+/***** ESTILO PRIMER NIVEL DEL NAV *****/
+.header__nav > ul > li {
+	/* Config de los hijos li a padre ul directo */
+	display: inline-block;
+}
+
+/***** ESTILO DEL SEGUNDO NIVEL DEL NAV *****/
+.header__nav li li {
+	/* Config de los elementos desplegables */
+	background-color: #2474BC;
+	line-height: 3em;
+	width: 140%;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.header__nav li > li > i {
+	/* Config de los íconos de la lista desplegable */
+	width: 7px;
+	color: #e2c713;
+}
+.header__nav li:hover li {
+	/* Animación de los items de la lista desplegable */
+	color: #000;
+	max-height: 500px;
+	overflow: visible;
+}
+
+/***** ESTILOS GENERALES DE LOS ENCABEZADOS *****/
+.header__h1 {
+	/* Título principal de todas las páginas*/
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+.header__h2 {
+	/* Título secundario de todas las páginas*/
+	padding: 5px;
+	margin: 10px 50px;
+	font-size: xx-large;	
+}
+.header__img {
+	/* Imagen principal de todas las páginas (en caso de existir)*/
+	width: auto;
+	display: block;
+	margin: auto;
+}
+
+/***** ESTILOS GENERALES DE LOS ARTICULOS *****/
+main {
+	/* Posicionamiento de las dos secciones: article y aside */
+	display: flex;
+	flex-wrap: wrap;
+}
+.article--grid {
+	/* Width del artículo (es temporal hasta implementar flex de manera completa)*/
+	width: 63.5vw;
+}
+.aside--grid {
+	/* Width del Contenido+*/
+	width: 35vw;
+}
+.section__h2 {
+	/* Config de los títulos del blog */
+	padding: 5px;
+	margin: 10px 40px;
+	font-size: xx-large;
+}
+.section__h3 {
+	/* Config de los sub títulos del blog */
+	padding: 5px;
+	margin: 10px 25px;
+	font-size: x-large;
+}
+.section__text {
+	/* Config del articulo del blog */
+	padding: 5px;
+	margin: 10px 25px;
+	font-size: 16px;
+	text-align: justify;
+}
+.section__list {
+	/* Config de las listas del blog */
+	padding: 5px;
+	margin: 10px 70px;
+	font-size: 16px;
+}
+.section__list li::marker {
+	/* Config de los bullets de las listas del blog */
+	color: rgb(255,0,0);
+	font-weight: bold;
+}
+.section img {
+	/* Estilo de las imagenes del artículo */
+	border: #000 1px solid;
+}
+.section__img {
+	/* Configs de las imágenes del blog */
+	width: 400px;
+	margin: 10px 300px;
+}
+.section__img--li {
+	/* Config de posicionamiento de las imágenes dentro de las listas */
+	margin: 10px 225px;
+}
+.section__div--img img{
+	/* Config del posicionamiento de las imágenes dobles */
+	display: inline-block;
+	margin: 0 2em 0 2em;
+}
+.section__table {
+	/* Config de la tabla del index */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	border: #000 1px solid;
+	max-width: 700px;
+	max-height: 550px;
+	padding: 5px;
+	margin: auto;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+/* ESTILOS GENERALES DEL FORMULARIO DE CONTACTO */
+.section__div--form {
+	/* Config de suscripción del form */
+	padding: 5px;
+	margin: 5px 25px;
+}
+.form__text {
+	/* Config del texto (idem articulo) */
+	padding: 5px;
+	margin: 10px 25px;
+	font-size: 16px;
+}
+.form__div {
+	/* Config de datos del comentarista del form */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px;
+	margin: 10px;
+}
+.form__div div {
+	/* Config de los inputs del comentarista */
+	padding: 5px;
+}
+.form__div img {
+	/* Imagen de adorno de los input */
+	width: 300px;
+}
+
+/* ESTILOS DE LOS INPUTS */
+.form__input, .section__input {
+	/* Estilo en reposo Input de subs y contacto */
+	border: none;
+	border-bottom: #2C7CBC 2px solid;
+	background: transparent;
+}
+.form__input:focus, .section__input:focus {
+	/* Estilo en uso input de subs y contacto */
+	background: linear-gradient(to bottom, transparent, #ffdd00);
+	outline-color: #2C7CBC;
+}
+.form__input--textarea {
+	/* Estilo y configs del textarea */
+	min-width: 400px;
+	min-height: 100px;
+	resize: none;
+	border: none;
+	border-bottom: #2C7CBC 2px solid;
+	background: transparent;
+}
+.form__input--textarea:focus {
+	/* Estilo en uso del textarea */
+	background: linear-gradient(to bottom, transparent, #ffdd00);
+	outline-color: #2C7CBC;
+}
+.form__button, .section__button {
+	/* Estilo en pasivo de los botones subs y enviar */
+	background-color: #004a86;
+	color: #fff;
+	border: none;
+	padding: 10px 40px;
+	font-weight: bold;
+	margin-left: 20px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.form__button:hover, .section__button:hover {
+	/* Estilo en uso de los botones subs y enviar */
+	background-color: #fff;
+	color: #000;
+	border: none;
+	padding: 10px 40px;
+	font-weight: bolder;
+	overflow: visible;
+	cursor: pointer;
+}
+
+/***** ESTILOS GENERALES PARA LOS ASIDE *****/
+.aside {
+	/* Configs de los Contenido+ de las páginas (donde se encuentren) */
+	position: sticky;
+	top: 30px;
+	margin: 15px;
+	border: solid 2px #000;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to left, #7CACD4, #4C7AAA); /*#2c3e50*/
+}
+.aside__h2 {
+	/* Título de Contenido+ de los aside */
+	padding: 10px;
+	text-align: center;	
+	font-size: xx-large;
+	color: #000;
+}
+.aside__div {
+	/* Posicionamiento de los elementos a visualizar (imagenes, videos, etc) */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.aside__div--video {
+	/* Config específica de los videos del Contenido+ */
+	height: 200px;
+}
+.aside__div--sound {
+	/* Config específica de las playlist del contenido+ */
+	height: 90px;
+}
+.aside a {
+	/* Config de los links a los distintos contenidos */
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-weight: bolder;
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+.aside img {
+	/* Configs de las imágenes de los Contenido+ */
+	width: 110px;
+	padding: 4px;
+}
+.aside__text {
+	/* Texto de la página Nosotros */
+	padding: 5px;
+	margin: 0px 10px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+}
+
+/***** ESTILOS GENERALES PARA LOS FOOTERS *****/
+.footer--grid {
+	/* Configs de posicionamiento del footer */
+	font-size: 14px;
+	padding-bottom: 10px;
+	margin-top: auto;
+	background-color: #2C7CBC;
+	color: #e9e9e9;
+}
+.footer__div {
+	/* Configs de posicionamiento de los hijos del footer */
+	display: flex;
+	justify-content: space-evenly;
+	line-height: 20px;
+	margin: 10px 0px 10px 0px;
+	}
+.footer__div a {
+	/* Decoración del link que lleva a Contacto */
+	color: #000;
+}
+.footer__div--socialmedia {
+	/* Config del apartado de redes sociales y su distribución */
+	display: flex;
+	align-items: center;
+	font-size: 15px; 
+}
+.footer__div--socialmedia a{
+	/* Configs de los links de las redes sociales */
+	text-decoration: none;
+	color: #000;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.footer__div--socialmedia i {
+	/* Configs de los íconos de las redes sociales */
+	font-size: 20px;
+}
+
+
+
+.galery--grid img {
+	width: 400px;
+}
+.galery--grid {
+	display: grid;
+	
+
+}
+
+
+
+
+.prueba {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	grid-template-rows: repeat(6, 100px);
+	border: #000 1px solid;
+	width: 80%;
+	margin: auto;
+	align-items: center;
+	gap: 2px 5px;
+}
+.prueba div {
+	text-align: center;
+	padding: 2px;
+	border: #000 1px solid;
+}
+.prueba div:first-child {
+	background-color: red;
+}
+
+/* RESPONSIVE DESIGN */
