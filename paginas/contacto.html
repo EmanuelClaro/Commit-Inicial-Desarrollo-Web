@@ -22,71 +22,53 @@
 </head>
 
 <body>
-	<header class="header">
-		<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
-			<nav class="header__nav">
-				<a href="../index.html"><img src="../multimedia/pngegg.png" alt="imagenlogo"></a>
-				<ul>
-					<li><a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-					<li><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Colecciones</a>
-						<ul>
-							<li><a href="acceleracers.html"><i class="fa-solid fa-arrow-right header__nav--fire"></i>Cartas
-									AcceleRacers</a></li>
-							<li><a href="megarace.html"><i class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a></li>
-							<li><a href="otrascartas.html"><i class="fa-solid fa-arrow-right"></i>Otras Colecciones</a>
-							</li>
-						</ul>
-					</li>
-					<li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i>Sobre Nosotros</a></li>
-					<li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
-				</ul>
-			</nav>
-		</div> <!-- ACÁ TERMINA EL NAV-->
+	<header class=" header">
+	<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
+		<nav class="header__nav">
+			<a href="../index.html"><img src="../multimedia/pngegg.png" alt="imagenlogo"></a>
+			<ul>
+				<li><a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+				<li><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Colecciones</a>
+					<ul>
+						<li><a href="acceleracers.html"><i class="fa-solid fa-arrow-right header__nav--fire"></i>Cartas
+								AcceleRacers</a></li>
+						<li><a href="megarace.html"><i class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a></li>
+						<li><a href="otrascartas.html"><i class="fa-solid fa-arrow-right"></i>Otras Colecciones</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i>Sobre Nosotros</a></li>
+				<li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
+			</ul>
+		</nav>
+	</div> <!-- ACÁ TERMINA EL NAV-->
 
-		<div class="header--grid"> <!-- ACÁ EMPIEZA EL HEADER -->
-			<h1 class="header__h1">Formulario de Contacto</h1>
-		</div> <!-- ACÁ TERMINA EL HEADER -->
+	<div class="header--grid"> <!-- ACÁ EMPIEZA EL HEADER -->
+		<h1 class="header__h1">Formulario de Contacto</h1>
+	</div> <!-- ACÁ TERMINA EL HEADER -->
 	</header>
 	<main>
-		<article> 
-			<section class="section"> <!-- ACÁ EMPIEZA LA SUSCRIPCIÓN NEWSLETTER -->
+		<article id="contacto">
+			<section class="section suscribe"> <!-- ACÁ EMPIEZA LA SUSCRIPCIÓN NEWSLETTER -->
 				<p class="section__text">¡Podés inscribirte a nuestro <i>newsletter</i> para recibir todas las
 					notificaciones en tu casilla de correo! Debes suscribirte en el siguiente recuadro colocando tu
 					dirección de correo electrónico:</p>
-				<div class="section__div--form">
-					<input class="section__input" type="email" name="mail" placeholder="Escriba su e-mail" required>
-					<input class="section__button" type="submit" value="Suscribirme">
-				</div>
+				<input class="section__input" type="email" name="mail" placeholder="Escriba su Correo" required>
+				<input class="section__button" type="submit" value="Suscribirme">
 			</section> <!-- ACÁ TERMINA LA SUSCRIPCIÓN NEWSLETTER -->
 
-			<form class="form"> <!-- ACÁ EMPIEZA EL FORMULARIO PARA EDICIÓN -->
-				<p class="form__text">Nos gusta que la comunidad crezca día a día, por lo que las puertas a sugerir contenido, información o cualquier otra coasa que aporte al website, ¡es más que bienvenida! Puedes dejarnos tus datos en los casilleros de abajo con la información que quieras agregar o modificar con el fin de mejorar el servicio de la página para todos los coleccionistas. ¡Esperamos tu participación!</p>
-				<div class="form__div">
-					<div>
-						<div>
-							<label for="firstname">Nombre </label>
-							<input class="form__input" type="text" name="firstname" required>
-						</div>
-						<div>
-							<label for="lastname">Apellido </label>
-							<input class="form__input" type="text" name="lastname" required>
-						</div>
-						<div>
-							<label for="mail">Correo Electrónico </label>
-							<input class="form__input" type="email" name="mail" required>
-						</div>
-					</div>
-					<div>
-						<div>
-							<input class="form__input--textarea" type="textarea" name="description" placeholder="Escribe tu comentario aquí" cols="50" rows="10" required>
-							<input class="form__button" type="submit" value="Enviar">
-						</div>
-					</div>
-					<div>
-						<img src="../multimedia/inicio/hot-wheels-logo.png" alt="logoinicio">
-					</div>
-				</div>
-			</form> <!-- ACÁ TERMINA EL FORMULARIO PARA EDICIÓN -->
+			<section class="section aportes"> <!-- ACÁ EMPIEZA EL FORMULARIO PARA EDICIÓN -->
+				<p class="section__text">Nos gusta que la comunidad crezca día a día, por lo que las puertas a sugerir
+					contenido, información o cualquier otra coasa que aporte al website, ¡es más que bienvenida! Puedes
+					dejarnos tus datos en los casilleros de abajo con la información que quieras agregar o modificar con
+					el fin de mejorar el servicio de la página para todos los coleccionistas. ¡Esperamos tu
+					participación!</p>
+				<input class="section__input" type="text" name="firstname" placeholder="Escribe tu Nombre" required>
+				<input class="section__input" type="text" name="lastname" placeholder="Escribe tu Apellido" required>
+				<input class="section__input" type="email" name="mail" placeholder="Escribe tu Correo" required>
+				<input class="section__input textarea" type="textarea" name="description" placeholder="Escribe tu comentario aquí" wrap="on" required>
+				<input class="section__button send" type="submit" value="Enviar">
+			</section> <!-- ACÁ TERMINA EL FORMULARIO PARA EDICIÓN -->
 		</article>
 	</main>
 	<footer class="footer--grid">
@@ -104,6 +86,6 @@
 			</div>
 		</div> <!-- ACÁ TERMINAN LAS REDES SOCIALES -->
 	</footer>
-</body>
+	</body>
 
 </html>

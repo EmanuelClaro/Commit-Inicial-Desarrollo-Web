@@ -218,80 +218,78 @@ main {
 }
 
 /* ESTILOS GENERALES DEL FORMULARIO DE CONTACTO */
-.section__div--form {
-	/* Config de suscripción del form */
-	padding: 5px;
-	margin: 5px 25px;
+#contacto {
+	/* Config de la hoja formulario */
+	margin: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 10px;
 }
-.form__text {
-	/* Config del texto (idem articulo) */
-	padding: 5px;
-	margin: 10px 25px;
-	font-size: 16px;
-}
-.form__div {
-	/* Config de datos del comentarista del form */
+.suscribe {
+	/* Distribución de Suscribe */
+	grid-column: 1 / 2;
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 	align-items: center;
-	padding: 10px;
-	margin: 10px;
 }
-.form__div div {
-	/* Config de los inputs del comentarista */
-	padding: 5px;
-}
-.form__div img {
-	/* Imagen de adorno de los input */
-	width: 300px;
+.aportes {
+	/* Distribución de Contacto */
+	grid-column: 2 / 4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* ESTILOS DE LOS INPUTS */
-.form__input, .section__input {
+.section__input {
 	/* Estilo en reposo Input de subs y contacto */
+	width: 60%;
+	padding: 10px;
+	margin-bottom: 20px;
 	border: none;
 	border-bottom: #2C7CBC 2px solid;
 	background: transparent;
+	font-size: 18px;
 }
-.form__input:focus, .section__input:focus {
+.section__input:focus {
 	/* Estilo en uso input de subs y contacto */
-	background: linear-gradient(to bottom, transparent, #ffdd00);
 	outline-color: #2C7CBC;
 }
-.form__input--textarea {
+.section__input::placeholder {
+	/* Color del texto predeterminado */
+	color: #a9a9a9;
+}
+.section__button {
+	/* Estilo en pasivo de los botones subs y enviar */
+	width: 40%;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #004a86, #2C7CBC) ;
+    font-size: 20px;
+	overflow: hidden;
+	transition: all 0.7s;
+}
+.send {
+	/* Estilo en pasivo del boton enviar */
+	width: 15%;
+}
+.section__button:hover{
+	/* Estilo en uso de los botones subs y enviar */
+    overflow: visible;
+	cursor:pointer;
+    transform: translateY(-3px);
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
+	color: #000;
+}
+.textarea {
 	/* Estilo y configs del textarea */
 	min-width: 400px;
 	min-height: 100px;
 	resize: none;
-	border: none;
-	border-bottom: #2C7CBC 2px solid;
-	background: transparent;
-}
-.form__input--textarea:focus {
-	/* Estilo en uso del textarea */
-	background: linear-gradient(to bottom, transparent, #ffdd00);
-	outline-color: #2C7CBC;
-}
-.form__button, .section__button {
-	/* Estilo en pasivo de los botones subs y enviar */
-	background-color: #004a86;
-	color: #fff;
-	border: none;
-	padding: 10px 40px;
-	font-weight: bold;
-	margin-left: 20px;
-	overflow: hidden;
-	transition: all 0.5s;
-}
-.form__button:hover, .section__button:hover {
-	/* Estilo en uso de los botones subs y enviar */
-	background-color: #fff;
-	color: #000;
-	border: none;
-	padding: 10px 40px;
-	font-weight: bolder;
-	overflow: visible;
-	cursor: pointer;
 }
 
 /***** ESTILOS GENERALES PARA LOS ASIDE *****/
@@ -311,7 +309,8 @@ main {
 	padding: 10px;
 	text-align: center;	
 	font-size: xx-large;
-	color: #000;
+	color: #f7f2dc;
+	text-transform: uppercase;
 }
 .aside__div {
 	/* Posicionamiento de los elementos a visualizar (imagenes, videos, etc) */
@@ -332,7 +331,7 @@ main {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #000;
+	color: #f7f2dc;
 	font-weight: bolder;
 	padding-top: 3px;
 	padding-bottom: 5px;
