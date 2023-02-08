@@ -139,6 +139,8 @@ body {
 	width: auto;
 	display: block;
 	margin: auto;
+	filter: drop-shadow(7px 7px 15px #000);
+	width: 50%;
 }
 
 /***** ESTILOS GENERALES DE LOS ARTICULOS *****/
@@ -256,6 +258,9 @@ main {
 	/* Estilo en uso input de subs y contacto */
 	outline-color: #2C7CBC;
 }
+.section__input:valid{
+	border: 2px solid #25d366;
+}
 .section__input::placeholder {
 	/* Color del texto predeterminado */
 	color: #a9a9a9;
@@ -281,9 +286,9 @@ main {
 	/* Estilo en uso de los botones subs y enviar */
     overflow: visible;
 	cursor:pointer;
-    transform: translateY(-3px);
+    transform: scale(1.1);
     transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
-	color: #000;
+	color: #bbb;
 }
 .textarea {
 	/* Estilo y configs del textarea */
@@ -340,6 +345,15 @@ main {
 	/* Configs de las imágenes de los Contenido+ */
 	width: 110px;
 	padding: 4px;
+	transition: transform 0.9s;
+}
+.aside iframe {
+	/* Config de los Iframes */
+	transition: transform 1.5s;
+}
+.aside img:hover, .aside iframe:hover {
+	/* Animación para los hover de los aside */
+	transform: scale(1.1);
 }
 .aside__text {
 	/* Texto de la página Nosotros */
@@ -391,12 +405,14 @@ main {
 
 
 .galery--grid img {
-	width: 400px;
+	width: 280px;
+	padding: 10px;
 }
 .galery--grid {
 	display: grid;
-	
-
+	border: #000 1px solid;
+	grid-template-columns: repeat(5, 1fr);
+	margin: 15px auto;
 }
 
 
