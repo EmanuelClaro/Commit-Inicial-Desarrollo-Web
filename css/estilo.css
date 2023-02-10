@@ -358,11 +358,36 @@ main {
 }
 
 /***** ESTILOS GENERALES PARA LOS FOOTERS *****/
+/* .footer--grid {
+	
+	background-color: #2C7CBC;
+	color: #e9e9e9;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.footer__div:first-child {
+	text-align: center;
+	padding-top: 5px;
+}
+.footer__div:nth-child(2) {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: ;
+}
+.footer__div--socialmedia i {
+	font-size: 20px;
+} 
+.footer--grid a {
+	text-decoration: none;
+	color: #000;
+}*/
 .footer--grid {
 	/* Configs de posicionamiento del footer */
 	font-size: 14px;
 	background-color: #2C7CBC;
 	color: #e9e9e9;
+	margin-top: auto;
 }
 .footer__div {
 	/* Configs de posicionamiento de los hijos del footer */
@@ -392,7 +417,6 @@ main {
 	/* Configs de los íconos de las redes sociales */
 	font-size: 20px;
 }
-
 
 
 .galery--grid img {
@@ -430,6 +454,18 @@ main {
 
 /* RESPONSIVE DESIGN */
 @media (max-width:800px) {
+	.header__nav {
+		display: flex;
+		flex-direction: column;
+	}
+	.header__nav ul {
+		display: flex;
+		justify-content: center;
+	}
+	.header__nav a > img {
+		display: block;
+		margin: auto;
+	}
 	.header__h2, .section__h3 {
 		text-align: center;
 	}
