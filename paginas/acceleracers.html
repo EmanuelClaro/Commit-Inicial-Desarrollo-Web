@@ -28,25 +28,40 @@
 	<header class="header">
 		<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
 			<nav class="header__nav">
-                <a href="index.html"><img src="../multimedia/logos/pngegg.png" alt="imagenlogo"></a>
-                <ul>
-                    <li><a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                    <li><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Colecciones</a>
-                        <ul>
-                            <li><a href="acceleracers.html"><i
-                                        class="fa-solid fa-arrow-right"></i>Cartas
-                                    AcceleRacers</a></li>
-                            <li><a href="megarace.html"><i class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
-                            </li>
-                            <li><a href="otrascartas.html"><i class="fa-solid fa-arrow-right"></i>Otras
-                                    Colecciones</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i>Sobre Nosotros</a></li>
-                    <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
-                </ul>
-            </nav>
+				<div class="header__container">
+					<a href="../index.html" class="header__nav--logo"><img src="../multimedia/logos/pngegg.png" alt="imglogonav"></a>
+					<label for="menu--responsive" class="header__label">
+						<i class="fa-solid fa-bars" class="header__icon"></i>
+					</label>
+					<input type="checkbox" id="menu--responsive" class="header__input">
+					<div class="header__nav--menu">
+						<ul>
+							<li><a href="../index.html" class="header__item"><i class="fa-solid fa-house"></i>Inicio</a>
+							</li>
+							<li><a href="#" class="header__item"><i class="fa-solid fa-star"></i>Colecciones<i
+										class="fa-solid fa-sort-down" id="down"></i></a>
+								<ul>
+									<li><a href="acceleracers.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Cartas
+											AcceleRacers</a></li>
+									<li><a href="megarace.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
+									</li>
+									<li><a href="otrascartas.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Otras
+											Colecciones</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="nosotros.html" class="header__item"><i class="fa-solid fa-user-group"></i>Sobre
+									Nosotros</a></li>
+							<li><a href="contacto.html" class="header__item"><i
+										class="fa-solid fa-envelope"></i>Contacto</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</div> <!-- ACÁ TERMINA EL NAV-->
 
 		<div class="header--grid"> <!-- ACÁ EMPIEZA EL HEADER -->
@@ -329,15 +344,12 @@
 		
 		<div class="footer__div"> <!-- ACÁ EMPIEZAN LAS REDES SOCIALES -->
 			<div class="footer__div--copy">
-				<p><span class="italic">Copyright©</span> - <span class="bold">2023. All Rights Reserved. Made by
-						Emanuel Claro for CoderHouse. </span></p>
-			</div> 
+				<p><span class="footer__responsive"><span class="italic">Copyright©</span> - <span class="bold">2023. All Rights Reserved.</span></span> <span class="bold footer__responsive">Made by	Emanuel Claro for CoderHouse.</span></p>
+			</div>
 			<div class="footer__div--socialmedia"> 
-				<i class="fa-brands fa-square-facebook"></i><a href="https://www.facebook.com"
-					target="_blank">Facebook</a>
-				<i class="fa-brands fa-square-twitter"></i><a href="https://www.twitter.com" target="_blank">Twitter</a>
-				<i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com"
-					target="_blank">Instagram</a>
+				<a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+					<a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+					<a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
 			</div> <!-- ACÁ TERMINAN LAS REDES SOCIALES -->
 		</div>
 	</footer>

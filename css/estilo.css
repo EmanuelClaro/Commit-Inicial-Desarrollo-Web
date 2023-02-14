@@ -48,7 +48,7 @@ body {
     width: 40px;
     text-align: center;
     font-size: 25px;
-    border: 1px solid black;
+    border: 1px solid #fff;
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -133,10 +133,12 @@ body {
     transition: all 0.7s;
 }
 .header__nav--menu > li > li > i {
+	/* Diseño de los íconos del menú desplegable */
     width: 7px;
     color: #e2c713;
 }
 .header__nav--menu li:hover li {
+	/* Animación de los items de la lista desplegable */
     color: #000;
     max-height: 500px;
     overflow: visible;
@@ -148,7 +150,7 @@ body {
 	padding: 10px;
 	margin-top: 20px;
 	margin-bottom: 5px;
-	font-size: 45px;
+	font-size: 3rem;
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 50px;
@@ -157,7 +159,7 @@ body {
 	/* Título secundario de todas las páginas*/
 	padding: 5px;
 	margin: 10px 50px;
-	font-size: xx-large;	
+	font-size: 2rem;	
 }
 .header__img {
 	/* Imagen principal de todas las páginas (en caso de existir)*/
@@ -233,6 +235,11 @@ main {
 .section__table {
 	/* Config de la tabla del index */
 	max-width: 65vw;
+	margin: 20px auto;
+}
+#megarace {
+	/* Config de la tabla de la página MegaRace */
+	max-width: 60vw;
 	margin: 10px auto;
 }
 
@@ -276,6 +283,7 @@ main {
 	outline-color: #2C7CBC;
 }
 .section__input:valid{
+	/* Estilo del imput con los valores correctos */
 	border: 2px solid #25d366;
 }
 .section__input::placeholder {
@@ -382,64 +390,55 @@ main {
 }
 
 /***** ESTILOS GENERALES PARA LOS FOOTERS *****/
-/* .footer--grid {
-	
-	background-color: #2C7CBC;
-	color: #e9e9e9;
-	font-size: 14px;
-	display: flex;
-	flex-direction: column;
-}
-.footer__div:first-child {
-	text-align: center;
-	padding-top: 5px;
-}
-.footer__div:nth-child(2) {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: ;
-}
-.footer__div--socialmedia i {
-	font-size: 20px;
-} 
-.footer--grid a {
-	text-decoration: none;
-	color: #000;
-}*/
 .footer--grid {
 	/* Configs de posicionamiento del footer */
+	margin-top: auto;
+	padding: 10px 0;
 	font-size: 14px;
 	background-color: #2C7CBC;
 	color: #e9e9e9;
-	margin-top: auto;
-}
-.footer__div {
-	/* Configs de posicionamiento de los hijos del footer */
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer--grid p {
+	/* Reseteo de los márgenes de Bootstrap en el footer */
+	margin-bottom: 0;
+}
+.footer__contacto {
+	/* Dirección específica de la página de Contacto */
+	flex-direction: row;
 	justify-content: space-evenly;
-	line-height: 20px;
-	margin-top: 10px;
-	}
-.footer__div a {
+}
+.footer--grid a {
 	/* Decoración del link que lleva a Contacto */
 	color: #000;
 }
+.footer__div:last-child {
+	/* Config del segundo div hijo de footer */
+	display: flex;
+}
+.footer__div--copy, .footer__div--socialmedia {
+	/* config de los hijos del segundo div hijo del footer */
+	margin: 0 3rem;
+}
 .footer__div--socialmedia {
-	/* Config del apartado de redes sociales y su distribución */
+	/* Aparienca de los enlaces e íconos de redes sociales */
 	display: flex;
 	align-items: center;
-	font-size: 15px; 
+	font-size: 14px;
 }
 .footer__div--socialmedia a{
 	/* Configs de los links de las redes sociales */
 	text-decoration: none;
-	color: #000;
-	padding-right: 5px;
-	padding-left: 5px;
+	color: #fff;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 .footer__div--socialmedia i {
 	/* Configs de los íconos de las redes sociales */
-	font-size: 20px;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 
@@ -452,28 +451,6 @@ main {
 	border: #000 1px solid;
 	grid-template-columns: repeat(5, 1fr);
 	margin: 15px auto;
-}
-
-
-
-
-.prueba {
-	display: grid;
-	grid-template-columns: 120px 1fr;
-	grid-template-rows: repeat(6, 100px);
-	border: #000 1px solid;
-	width: 80%;
-	margin: auto;
-	align-items: center;
-	gap: 2px 5px;
-}
-.prueba div {
-	text-align: center;
-	padding: 2px;
-	border: #000 1px solid;
-}
-.prueba div:first-child {
-	background-color: red;
 }
 
 /* RESPONSIVE DESIGN */
@@ -489,6 +466,7 @@ main {
 		justify-content: space-between;
         position: fixed;
         width: 100%;
+		z-index: 1000;
     }
     .header__label {
 		/* Config del Botón */
@@ -537,45 +515,116 @@ main {
         text-align: center;
     }
     .header__nav--menu li ul {
+		/* Config de la lista desplegable */
         width: 100%;
         position: relative;
+		top: 0;
         display: flex;
 		flex-direction: column;
     }
     .header__nav--menu li li {
+		/* Estilo de la lista desplegable */
         border: none;
     }
     .header__item {
+		/* Config de los enlaces */
         margin: 15px 0;
     }
     .header__h2, .section__h3 {
+		/* Posicionamiento de los títulos y subtítulos */
 		text-align: center;
 	}
 	.header__img {
+		/* Posicionamiento de las imágenes de la cabecera */
 		width: auto;
 	}
 	#contacto {
+		/* Config del apartado del formulario de contacto */
 		display: flex;
 		flex-direction: column;
 		margin: auto;
 	}
 	.section__button {
+		/* Botón suscribirse */
 		width: 30%;
 	}
 	.send {
+		/* Botón enviar */
 		width: 20%;
 	}
-	.footer__div {
+	.footer--grid {
+		/* Config del footer */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
+		padding: 10px 0;
 	}
-	.footer__div--copy {
-		line-height: 40px;
+	.footer__contacto {
+		/* Posicionamiento del primer hijo del footer */
+		display: flex;
+		flex-direction: row;
+	}
+	.footer__div:last-child {
+		/* Posicionamientro del segundo hijo del footer */
+		line-height: 35px;
+	}
+	.footer__responsive{
+		/* Copyright */
+		display: block;
 	}
 	.footer__div--socialmedia {
+		/* Posicionamiento de los íconos de redes */
 		display: flex;
 		justify-content: center;
+	}
+	.footer__div--socialmedia i {
+		/* Íconos de Redes */
+		margin: 0 10px
+	}
+}
+@media (max-width:428px) {
+	.header__nav--menu {
+		width: 45%;
+	}
+	.header__h1 {
+		font-size: 2rem;
+		line-height: 35px;
+		letter-spacing: 3px;
+	}
+	.header__img {
+		width: 400px;
+	}
+	.header__h2 {
+		font-size: 1.5rem;
+		padding: 0;
+	}
+	.header__responsive {
+		display: block;
+	}
+	.section__button {
+		width: 40%;
+	}
+	.send {
+		margin-bottom: 15px;
+		width: 30%;
+	}
+	.section__input {
+		width: 75%;
+	}
+	.textarea {
+		min-width: 321px;
+	}
+	.footer__div:last-child {
+		align-items: center;
+		justify-content: space-around;
+	}
+	.footer__div--copy {
+		line-height: 30px;
+		margin: 0;
+	}
+	.footer__div--socialmedia {
+		flex-direction: column;
+		margin: 0;
 	}
 }
