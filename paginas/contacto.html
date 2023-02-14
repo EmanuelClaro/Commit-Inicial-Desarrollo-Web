@@ -24,26 +24,40 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class=" header">
 	<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
 		<nav class="header__nav">
-			<a href="index.html"><img src="../multimedia/logos/pngegg.png" alt="imagenlogo"></a>
-			<ul>
-				<li><a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-				<li><a href="#"><i class="fa-solid fa-fire-flame-curved"></i>Colecciones</a>
+			<div class="header__container">
+				<a href="#" class="header__nav--logo"><img src="../multimedia/logos/pngegg.png" alt="imglogonav"></a>
+				<label for="menu--responsive" class="header__label">
+					<i class="fa-solid fa-bars" class="header__icon"></i>
+				</label>
+				<input type="checkbox" id="menu--responsive" class="header__input">
+				<div class="header__nav--menu">
 					<ul>
-						<li><a href="acceleracers.html"><i class="fa-solid fa-arrow-right header__nav--fire"></i>Cartas
-								AcceleRacers</a></li>
-						<li><a href="megarace.html"><i class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
+						<li><a href="../index.html" class="header__item"><i class="fa-solid fa-house"></i>Inicio</a></li>
+						<li><a href="#" class="header__item"><i class="fa-solid fa-star"></i>Colecciones<i
+									class="fa-solid fa-sort-down" id="down"></i></a>
+							<ul>
+								<li><a href="acceleracers.html" class="header__item"><i
+											class="fa-solid fa-arrow-right"></i>Cartas
+										AcceleRacers</a></li>
+								<li><a href="megarace.html" class="header__item"><i
+											class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
+								</li>
+								<li><a href="otrascartas.html" class="header__item"><i
+											class="fa-solid fa-arrow-right"></i>Otras
+										Colecciones</a>
+								</li>
+							</ul>
 						</li>
-						<li><a href="otrascartas.html"><i class="fa-solid fa-arrow-right"></i>Otras
-								Colecciones</a>
+						<li><a href="nosotros.html" class="header__item"><i class="fa-solid fa-user-group"></i>Sobre
+								Nosotros</a></li>
+						<li><a href="contacto.html" class="header__item"><i class="fa-solid fa-envelope"></i>Contacto</a>
 						</li>
 					</ul>
-				</li>
-				<li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i>Sobre Nosotros</a></li>
-				<li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
-			</ul>
+				</div>
+			</div>
 		</nav>
 	</div> <!-- ACÁ TERMINA EL NAV-->
 

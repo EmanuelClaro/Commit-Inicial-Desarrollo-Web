@@ -29,93 +29,117 @@ body {
 
 /***** ESTILO GENERAL DEL NAV *****/
 .header__nav {
-	/* Configs del NavBar */
-	font-size: 16px;
-	display: flex;
-	justify-content: end;
-	background: #045CAC;
+	/* Config básica del NavbBar */
+    background-color: #045CAC;
+    height: 4em;
 }
-.header__nav ul {
-	/* Config de la listas */
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	justify-content: end;
-	width: 100%;
-	/* Estilos de los enlaces */
-	text-transform: uppercase;
-	font-size: 18px;
-	font-family: 'Oswald', sans-serif;
+.header__container {
+	/* Config del posicionamiento del NavBar Desktop */
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
-.header__nav a > img {
-	/* Configs de la Imagen */
-	display: flex;
-	align-items: center;
+.header__label i {
+	/* Estilos del Botón Menú Responsive */
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.header__nav li {
-	/* Config de los elementos de la lista visible */
-	line-height: 4em;
-	position: relative;
-	transition: 0.5s;
-}
-.header__nav li ul {
-	/* Config de los elementos de la lista desplegable */
-	display: block;
-	position: absolute;
-	z-index: 1;
-	text-transform: none;
-}
-.header__nav a{
+.header__item {
 	/* Config de los links de la lista visible */
-	color: #fff;
+    color: #fff;
 	display: inline-block;
 	padding: 0 20px;
 	text-decoration: none;
 	transition: 0.5s;
 }
-.header__nav li i{
-	/* Config de los íconos de la lista visible */
-	margin-left: 3px;
-	margin-right: 1.1em;
-	width: 7px;
-	color: #e2c713;
+.header__item:hover {
+	/* Animación de los links de la lista visible y desplegable */
+    color: #000;
 }
-.header__nav li:hover {
-	/* Animación de los elementos de la lista visible */
-	background-color: #fff;
+.header__input:checked + .header__nav--menu ul {
+	/* Color de fondo del Menú Responsive */
+    background-color: #045CAC;
 }
-.header__nav a:hover {
-	/* Animación de los links de la lista visible y desplegable*/
-	color: #000;
+.header__label, .header__input {
+	/* Botón Menú Responsive Oculto */
+    display: none;
+}
+.header__nav a > img {
+	/* Configs de la Imagen */
+	display: flex;
+	align-items: center;
+	margin: 0 50px;
+}
+.header__nav--menu ul {
+	/* Config de las listas del NavBar */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+	/* Estilos de los enlaces */
+	text-transform: uppercase;
+    font-size: 18px;
+	font-family: 'Oswald', sans-serif;
+}
+.header__nav--menu li {
+	/* Config de los elementos de la lista visible */
+    line-height: 4em;
+    position: relative;
+    transition: 0.5s;
+}
+.header__nav--menu li ul {
+	/* Config de los elementos de la lista desplegable */
+    display: block;
+    position: absolute;
+	top: 68px;
+    z-index: 10;
+    text-transform: none;
+}
+.header__nav--menu li i {
+	/* Config de los iconos de la lista visible */
+    margin-left: 3px;
+    margin-right: 1.1em;
+    width: 7px;
+    color: #e2c713;
+}
+#down {
+	/* Icono Barra abajo del Menú Responsive enlace "Colecciones" */
+    display: none;
 }
 
 /***** ESTILO PRIMER NIVEL DEL NAV *****/
-.header__nav > ul > li {
-	/* Config de los hijos li a padre ul directo */
-	display: inline-block;
+.header__nav--menu > ul > li {
+	/* Config de los hijos li de Colecciones a padre ul directo */
+    display: inline-block;
 }
 
 /***** ESTILO DEL SEGUNDO NIVEL DEL NAV *****/
-.header__nav li li {
+.header__nav--menu li li {
 	/* Config de los elementos desplegables */
-	background-color: #2474BC;
-	line-height: 3em;
-	width: 140%;
-	max-height: 0;
-	overflow: hidden;
-	transition: all 0.5s;
+    background-color: #2474BC;
+    line-height: 3em;
+    width: 140%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s;
 }
-.header__nav li > li > i {
-	/* Config de los íconos de la lista desplegable */
-	width: 7px;
-	color: #e2c713;
+.header__nav--menu > li > li > i {
+    width: 7px;
+    color: #e2c713;
 }
-.header__nav li:hover li {
-	/* Animación de los items de la lista desplegable */
-	color: #000;
-	max-height: 500px;
-	overflow: visible;
+.header__nav--menu li:hover li {
+    color: #000;
+    max-height: 500px;
+    overflow: visible;
 }
 
 /***** ESTILOS GENERALES DE LOS ENCABEZADOS *****/
@@ -174,14 +198,14 @@ main {
 	/* Config del articulo del blog */
 	padding: 5px;
 	margin: 10px 25px;
-	font-size: 16px;
+	font-size: 1rem;
 	text-align: justify;
 }
 .section__list {
 	/* Config de las listas del blog */
 	padding: 5px;
 	margin: 10px 70px;
-	font-size: 16px;
+	font-size: 1rem;
 }
 .section__list li::marker {
 	/* Config de los bullets de las listas del blog */
@@ -453,20 +477,78 @@ main {
 }
 
 /* RESPONSIVE DESIGN */
+
 @media (max-width:800px) {
-	.header__nav {
+	.header--grid {
+		/* Posicionamiento del body en Responsive */
+        padding-top: 55px;
+    }
+    .header__nav {
+		/* Configu del NavBar con Botón */
 		display: flex;
-		flex-direction: column;
-	}
-	.header__nav ul {
-		display: flex;
-		justify-content: center;
-	}
+		justify-content: space-between;
+        position: fixed;
+        width: 100%;
+    }
+    .header__label {
+		/* Config del Botón */
+        display: block;
+        cursor: pointer;
+		margin: auto 50px;
+    }
 	.header__nav a > img {
+		/* Config de la imagen en Responsive */
 		display: block;
-		margin: auto;
+		margin: auto 50px;
 	}
-	.header__h2, .section__h3 {
+    #down {
+		/* Icono desplegable de "Colecciones" */
+        display: inline-block;
+        position: relative;
+        bottom: 3px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .header__nav--menu {
+		/* Posicionamiento de los enlaces */
+        position: fixed;
+        top: 4em;
+        bottom: 0;
+        width: 30%;
+        right: 0;
+    }
+    .header__nav--menu ul {
+		/* Config del menú escondido */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		/* Animación del menú escondido */
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: all 0.7s ease-in-out;
+    }
+	.header__input:checked + .header__nav--menu ul {
+		/* Animación del menú al desplegarse */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .header__nav--menu li {
+		/* Decoración y posición de los enlaces */
+        width: 100%;
+        border-bottom: 1px solid #000;
+        text-align: center;
+    }
+    .header__nav--menu li ul {
+        width: 100%;
+        position: relative;
+        display: flex;
+		flex-direction: column;
+    }
+    .header__nav--menu li li {
+        border: none;
+    }
+    .header__item {
+        margin: 15px 0;
+    }
+    .header__h2, .section__h3 {
 		text-align: center;
 	}
 	.header__img {
