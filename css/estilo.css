@@ -163,7 +163,6 @@ body {
 }
 .header__img {
 	/* Imagen principal de todas las páginas (en caso de existir)*/
-	width: auto;
 	display: block;
 	margin: auto;
 	filter: drop-shadow(7px 7px 15px #000);
@@ -172,29 +171,20 @@ body {
 
 /***** ESTILOS GENERALES DE LOS ARTICULOS *****/
 main {
-	/* Posicionamiento de las dos secciones: article y aside */
-	display: flex;
-	flex-wrap: wrap;
-}
-.article--grid {
-	/* Width del artículo (es temporal hasta implementar flex de manera completa)*/
-	width: 63.5vw;
-}
-.aside--grid {
-	/* Width del Contenido+*/
-	width: 35vw;
+	/* Medida de las dos secciones: article,aside/bootstrap */
+	width: 99vw;
 }
 .section__h2 {
 	/* Config de los títulos del blog */
 	padding: 5px;
 	margin: 10px 40px;
-	font-size: xx-large;
+	font-size: 2rem;
 }
 .section__h3 {
 	/* Config de los sub títulos del blog */
 	padding: 5px;
 	margin: 10px 25px;
-	font-size: x-large;
+	font-size: 1.5rem;
 }
 .section__text {
 	/* Config del articulo del blog */
@@ -214,17 +204,16 @@ main {
 	color: rgb(255,0,0);
 	font-weight: bold;
 }
-.section img {
-	/* Estilo de las imagenes del artículo */
-	border: #000 1px solid;
-}
 .section__img {
 	/* Configs de las imágenes del blog */
+	display: block;
 	width: 400px;
 	margin: 10px 300px;
+	border: #000 1px solid;
 }
 .section__img--li {
 	/* Config de posicionamiento de las imágenes dentro de las listas */
+	display: block;
 	margin: 10px 225px;
 }
 .section__div--img img{
@@ -326,8 +315,8 @@ main {
 .aside {
 	/* Configs de los Contenido+ de las páginas (donde se encuentren) */
 	position: sticky;
-	top: 30px;
-	margin: 15px;
+	top: 25px;
+	margin: 10px;
 	border: solid 2px #000;
 	border-radius: 25px;
 	display: flex;
@@ -455,7 +444,12 @@ main {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
+	.row {
+		/* Reseteo de Bootstrap */
+    	margin: 0;
+	}
+	/***** ENCABEZADO Y NAVMENÚ *****/
 	.header--grid {
 		/* Posicionamiento del body en Responsive */
         padding-top: 55px;
@@ -530,7 +524,7 @@ main {
 		/* Config de los enlaces */
         margin: 15px 0;
     }
-    .header__h2, .section__h3 {
+    .header__h2, .section__h2, .section__h3 {
 		/* Posicionamiento de los títulos y subtítulos */
 		text-align: center;
 	}
@@ -538,6 +532,31 @@ main {
 		/* Posicionamiento de las imágenes de la cabecera */
 		width: auto;
 	}
+	/***** ARTÍCULO PRINCIPAL *****/
+	.section__img {
+		/* Posicionamiento de las imágenes */
+		margin: 10px auto;
+	}
+	.section__div--img img {
+		/* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+		width: 310px;
+		margin: 1 auto;
+	}
+	/***** ASIDE *****/
+	.aside--grid {
+		/* Tamaño del Aside */
+		width: 80%;
+		margin: auto;
+	}
+	.aside__div--img {
+		/* Distribución de las imágenes del Aside */
+		gap: 5px 20px;
+	}
+	.aside img:hover, .aside iframe:hover {
+		/* Animación para los hover de los aside */
+		transform: none;
+	}
+	/***** FORMULARIO DE CONTACTO *****/
 	#contacto {
 		/* Config del apartado del formulario de contacto */
 		display: flex;
@@ -552,6 +571,7 @@ main {
 		/* Botón enviar */
 		width: 20%;
 	}
+	/***** PIE DE PÁGINA *****/
 	.footer--grid {
 		/* Config del footer */
 		display: flex;
@@ -584,46 +604,112 @@ main {
 	}
 }
 @media (max-width:428px) {
+	/***** ENCABEZADO Y NAVMENÚ *****/
 	.header__nav--menu {
-		width: 45%;
+		/* Tamaño de la barra oculta */
+		width: 55%;
 	}
 	.header__h1 {
+		/* Config del título del encabezado */
 		font-size: 2rem;
 		line-height: 35px;
 		letter-spacing: 3px;
 	}
 	.header__img {
+		/* Tamaño de la imagén del encabezado */
 		width: 400px;
 	}
 	.header__h2 {
+		/* Tamaño del sutítulo del encabezado */
 		font-size: 1.5rem;
 		padding: 0;
 	}
 	.header__responsive {
+		/* Span dentro del nombre del título para su distribución correcta */
 		display: block;
 	}
+	/***** ARTÍCULO PRINCIPAL *****/
+	.section__list {
+		/* Posicionamiento de las listas */
+		margin: 0px 30px;
+	}
+	.section__img {
+		/* Config de las imágenes */
+		width: 300px;
+		margin: 10px auto;
+	}
+	.section__img--li {
+		/* Config de las imágenes dentro de las listas */
+		width: 300px;
+	}
+	.section__div--img img {
+		/* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+		display: flex;
+		width: 300px;
+		margin: 10px auto;
+	}
+	/***** FORMULARIO DE CONTACTO *****/
 	.section__button {
+		/* Tamaño del botón de suscribirse */
 		width: 40%;
 	}
 	.send {
+		/* Tamaño del botón de enviar */
 		margin-bottom: 15px;
 		width: 30%;
 	}
 	.section__input {
+		/* Tamaño de los inputs del formulario */
 		width: 75%;
 	}
 	.textarea {
+		/* Tamaño del textarea del formulario */
 		min-width: 321px;
 	}
+	/***** ASIDE *****/
+	.aside--grid {
+		/* Posicionamiento del contenido+ */
+		width: 100%;
+		margin: auto;
+	}
+	.aside__div--img {
+		/* Separación de las imágenes dentro de contenido+ */
+		gap: 0;
+	}
+	.aside__div--img img {
+		/* Tamaño de las imágenes del contenido+ */
+		width: 80px;
+	}
+	.aside__div--sound iframe {
+		/* Tamaño de la barra de lista de reproducción del contenido+ */
+		width: 300px;
+	}
+	.aside img:hover, .aside iframe:hover {
+		/* Animación para los hover de los aside */
+		transform: none;
+	}
+	.aside__responsive {
+		/* Span dentro del ancla Kile Petty para su distribución correcta */
+		display: block;
+	}
+	/***** PÍE DE PÁGINA *****/
+	.footer__div:first-child p {
+		/* Posicionamiento del texto de suscribirse */
+		margin: 2px;
+	}
 	.footer__div:last-child {
+		/* Posicionamiento del div que contiene copy y socialmedia */
 		align-items: center;
 		justify-content: space-around;
+		gap: 20px;
 	}
 	.footer__div--copy {
+		/* Config de Copyright */
 		line-height: 30px;
 		margin: 0;
 	}
 	.footer__div--socialmedia {
+		/* Posicionamiento de los íconos de redes sociales */
 		flex-direction: column;
 		margin: 0;
 	}
