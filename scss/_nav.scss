@@ -76,14 +76,14 @@
 	}
 	li {
         /* Config de los elementos de la lista visible */
-		line-height: 4em;
+		line-height: 3.5em;
 		position: relative;
 		transition: 0.5s;
 		ul {
             /* Config de los elementos de la lista desplegable */
 			display: block;
 			position: absolute;
-			top: 68px;
+			top: 64px;
 			z-index: 10;
 			text-transform: none;
 		}
@@ -127,6 +127,7 @@
 			}
 		}
 	}
+	margin: 0;
 }
 #down {
     /* Icono Barra abajo del Menú Responsive enlace "Colecciones" */

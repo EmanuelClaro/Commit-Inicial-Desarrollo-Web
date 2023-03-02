@@ -39,7 +39,7 @@ main {
     /* Configs de las imágenes del blog */
 	display: block;
 	width: 400px;
-	margin: 10px 300px;
+	margin: 10px auto;
 	border: #000 1px solid;
 }
 .section__img--li {
@@ -47,12 +47,15 @@ main {
 	display: block;
 	margin: 10px 225px;
 }
+.section__img--sm{
+	/* Config espécifica de Serie Maestra */
+	width: 300px;
+}
 .section__div--img {
-	img {
-        /* Config del posicionamiento de las imágenes dobles */
-		display: inline-block;
-		margin: 0 2em 0 2em;
-	}
+	/* Config del posicionamiento de las imágenes dobles */
+	display: flex;
+	justify-content: center;
+	gap: 0;
 }
 .section__table {
     /* Config de la tabla del index */
