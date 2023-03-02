@@ -1,0 +1,70 @@
+/***** ESTILOS GENERALES PARA LOS ASIDE *****/
+.aside {
+    /* Configs de los Contenido+ de las páginas (donde se encuentren) */
+	position: sticky;
+	top: 25px;
+	margin: 10px;
+	border: solid 2px #000;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to left, #7CACD4, #4C7AAA);
+	a {
+        /* Config de los links a los distintos contenidos */
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: $color_7;
+		font-weight: bolder;
+		padding-top: 3px;
+		padding-bottom: 5px;
+	}
+	img {
+        /* Configs de las imágenes de los Contenido+ */
+		width: 110px;
+		padding: 4px;
+		transition: transform 0.9s;
+		&:hover {
+            /* Animación para los hover de los aside */
+			transform: scale(1.1);
+		}
+	}
+	iframe {
+        /* Config de los Iframes */
+		transition: transform 1.5s;
+		&:hover {
+            /* Animación para los hover de los aside */
+			transform: scale(1.1);
+		}
+	}
+}
+.aside__h2 {
+    /* Título de Contenido+ de los aside */
+	padding: 10px;
+	text-align: center;
+	font-size: xx-large;
+	color: $color_7;
+	text-transform: uppercase;
+}
+.aside__div {
+    /* Posicionamiento de los elementos a visualizar (imagenes, videos, etc) */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.aside__div--video {
+    /* Config específica de los videos del Contenido+ */
+	height: 200px;
+}
+.aside__div--sound {
+    /* Config específica de las playlist del Contenido+ */
+	height: 90px;
+}
+.aside__text {
+    /* Texto de la página Nosotros */
+	padding: 5px;
+	margin: 0 10px;
+	font-size: 16px;
+	text-align: center;
+	color: $color_1;
+}

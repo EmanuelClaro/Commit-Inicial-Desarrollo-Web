@@ -1,0 +1,134 @@
+/***** ESTILO GENERAL DEL NAV *****/
+.header__nav {
+    /* Config básica del NavbBar */
+	background-color: $background-color_2;
+	height: 4em;
+	a {
+		>img {
+            /* Configs de la Imagen */
+			display: flex;
+			align-items: center;
+			margin: 0 50px;
+		}
+	}
+}
+.header__container {
+    /* Config del posicionamiento del NavBar Desktop */
+	display: flex;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__label {
+	i {
+        /* Estilos del Botón Menú Responsive */
+		color: $color_1;
+		width: 40px;
+		text-align: center;
+		font-size: 25px;
+		border: 1px solid #fff;
+		padding: 5px;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+    /* Botón Menú Responsive Oculto */
+	display: none;
+}
+.header__item {
+    /* Config de los links de la lista visible */
+	color: $color_1;
+	display: inline-block;
+	padding: 0 20px;
+	text-decoration: none;
+	transition: 0.5s;
+	&:hover {
+        /* Animación de los links de la lista visible y desplegable */
+		color: $color_2;
+	}
+}
+.header__input {
+	&:checked {
+		+ {
+			.header__nav--menu {
+				ul {
+                    /* Color de fondo del Menú Responsive */
+					background-color: $background-color_2;
+				}
+			}
+		}
+	}
+    /* Botón Menú Responsive Oculto */
+	display: none;
+}
+.header__nav--menu {
+	ul {
+        /* Config de las listas del NavBar */
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+        /* Estilos de los enlaces */
+		text-transform: uppercase;
+		font-size: 18px;
+		font-family: $font-family_2;
+	}
+	li {
+        /* Config de los elementos de la lista visible */
+		line-height: 4em;
+		position: relative;
+		transition: 0.5s;
+		ul {
+            /* Config de los elementos de la lista desplegable */
+			display: block;
+			position: absolute;
+			top: 68px;
+			z-index: 10;
+			text-transform: none;
+		}
+		i {
+            /* Config de los iconos de la lista visible */
+			margin-left: 3px;
+			margin-right: 1.1em;
+			width: 7px;
+			color: $color_3;
+		}
+		li {
+            /* Config de los elementos desplegables */
+			background-color: $background-color_3;
+			line-height: 3em;
+			width: 140%;
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.7s;
+		}
+		&:hover {
+			li {
+                /* Animación de los items de la lista desplegable */
+				color: $color_2;
+				max-height: 500px;
+				overflow: visible;
+			}
+		}
+	}
+	>ul {
+		>li {
+            /* Config de los hijos li de Colecciones a padre ul directo */
+			display: inline-block;
+		}
+	}
+	>li {
+		>li {
+			>i {
+                /* Diseño de los íconos del menú desplegable */
+				width: 7px;
+				color: $color_3;
+			}
+		}
+	}
+}
+#down {
+    /* Icono Barra abajo del Menú Responsive enlace "Colecciones" */
+	display: none;
+}

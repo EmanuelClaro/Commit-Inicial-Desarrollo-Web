@@ -1,0 +1,24 @@
+/***** ESTILOS GENERALES DE LOS ENCABEZADOS *****/
+.header__h1 {
+    /* Título principal de todas las páginas*/
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 50px;
+}
+.header__h2 {
+    /* Título secundario de todas las páginas*/
+	padding: 5px;
+	margin: 10px 50px;
+	font-size: 2rem;
+}
+.header__img {
+    /* Imagen principal de todas las páginas (en caso de existir)*/
+	display: block;
+	margin: auto;
+	filter: drop-shadow(7px 7px 15px #000);
+	width: 50%;
+}

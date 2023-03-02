@@ -1,716 +1,805 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300&family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 /***** ESTILO GENERAL DEL SITIO WEB *****/
-* { 
-	/* Medidas Resets de las páginas */
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+* {
+  /* Medidas Resets de las páginas */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body { 
-	/* Estilos y Configs del Body */
-	font-family: 'Figtree', sans-serif;
-	background-color:#f8f8ff; /*#F9F8E5 ; #F4F2D0*/
-	line-height: 1.7em;
-	/* Config para el Footer al Píe de la Página */
-	display: flex; 
-	flex-direction: column;
-	min-height: 100vh;
-	/* Estilo del fondo de la página */
-	background-image: url(../multimedia/shattered.png);
-	background-attachment: fixed;
+
+body {
+  /* Estilos y Configs del Body */
+  font-family: "Figtree", sans-serif;
+  background-color: #f8f8ff;
+  line-height: 1.7em;
+  overflow-x: hidden;
+  /* Config para el Footer al Píe de la Página */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Estilo del fondo de la página */
+  background-image: url(../multimedia/shattered.png);
+  background-attachment: fixed;
 }
+
 .italic {
-	/* Spans en formato Italic */
-	font-style: italic;
+  /* Spans en formato Italic */
+  font-style: italic;
 }
+
 .bold {
-	/* Spans en formato Bold */
-	font-weight: bold;
+  /* Spans en formato Bold */
+  font-weight: bold;
 }
 
 /***** ESTILO GENERAL DEL NAV *****/
 .header__nav {
-	/* Config básica del NavbBar */
-    background-color: #045CAC;
-    height: 4em;
-}
-.header__container {
-	/* Config del posicionamiento del NavBar Desktop */
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-}
-.header__label i {
-	/* Estilos del Botón Menú Responsive */
-    color: #fff;
-    width: 40px;
-    text-align: center;
-    font-size: 25px;
-    border: 1px solid #fff;
-    padding: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.header__item {
-	/* Config de los links de la lista visible */
-    color: #fff;
-	display: inline-block;
-	padding: 0 20px;
-	text-decoration: none;
-	transition: 0.5s;
-}
-.header__item:hover {
-	/* Animación de los links de la lista visible y desplegable */
-    color: #000;
-}
-.header__input:checked + .header__nav--menu ul {
-	/* Color de fondo del Menú Responsive */
-    background-color: #045CAC;
-}
-.header__label, .header__input {
-	/* Botón Menú Responsive Oculto */
-    display: none;
+  /* Config básica del NavbBar */
+  background-color: #045CAC;
+  height: 4em;
 }
 .header__nav a > img {
-	/* Configs de la Imagen */
-	display: flex;
-	align-items: center;
-	margin: 0 50px;
+  /* Configs de la Imagen */
+  display: flex;
+  align-items: center;
+  margin: 0 50px;
 }
+
+.header__container {
+  /* Config del posicionamiento del NavBar Desktop */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__label {
+  /* Botón Menú Responsive Oculto */
+  display: none;
+}
+.header__label i {
+  /* Estilos del Botón Menú Responsive */
+  color: #fff;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header__item {
+  /* Config de los links de la lista visible */
+  color: #fff;
+  display: inline-block;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.header__item:hover {
+  /* Animación de los links de la lista visible y desplegable */
+  color: #000;
+}
+
+.header__input {
+  /* Botón Menú Responsive Oculto */
+  display: none;
+}
+.header__input:checked + .header__nav--menu ul {
+  /* Color de fondo del Menú Responsive */
+  background-color: #045CAC;
+}
+
 .header__nav--menu ul {
-	/* Config de las listas del NavBar */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-	/* Estilos de los enlaces */
-	text-transform: uppercase;
-    font-size: 18px;
-	font-family: 'Oswald', sans-serif;
+  /* Config de las listas del NavBar */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* Estilos de los enlaces */
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
 }
 .header__nav--menu li {
-	/* Config de los elementos de la lista visible */
-    line-height: 4em;
-    position: relative;
-    transition: 0.5s;
+  /* Config de los elementos de la lista visible */
+  line-height: 4em;
+  position: relative;
+  transition: 0.5s;
 }
 .header__nav--menu li ul {
-	/* Config de los elementos de la lista desplegable */
-    display: block;
-    position: absolute;
-	top: 68px;
-    z-index: 10;
-    text-transform: none;
+  /* Config de los elementos de la lista desplegable */
+  display: block;
+  position: absolute;
+  top: 68px;
+  z-index: 10;
+  text-transform: none;
 }
 .header__nav--menu li i {
-	/* Config de los iconos de la lista visible */
-    margin-left: 3px;
-    margin-right: 1.1em;
-    width: 7px;
-    color: #e2c713;
+  /* Config de los iconos de la lista visible */
+  margin-left: 3px;
+  margin-right: 1.1em;
+  width: 7px;
+  color: #e2c713;
 }
-#down {
-	/* Icono Barra abajo del Menú Responsive enlace "Colecciones" */
-    display: none;
-}
-
-/***** ESTILO PRIMER NIVEL DEL NAV *****/
-.header__nav--menu > ul > li {
-	/* Config de los hijos li de Colecciones a padre ul directo */
-    display: inline-block;
-}
-
-/***** ESTILO DEL SEGUNDO NIVEL DEL NAV *****/
 .header__nav--menu li li {
-	/* Config de los elementos desplegables */
-    background-color: #2474BC;
-    line-height: 3em;
-    width: 140%;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.7s;
-}
-.header__nav--menu > li > li > i {
-	/* Diseño de los íconos del menú desplegable */
-    width: 7px;
-    color: #e2c713;
+  /* Config de los elementos desplegables */
+  background-color: #2474BC;
+  line-height: 3em;
+  width: 140%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.7s;
 }
 .header__nav--menu li:hover li {
-	/* Animación de los items de la lista desplegable */
-    color: #000;
-    max-height: 500px;
-    overflow: visible;
+  /* Animación de los items de la lista desplegable */
+  color: #000;
+  max-height: 500px;
+  overflow: visible;
+}
+.header__nav--menu > ul > li {
+  /* Config de los hijos li de Colecciones a padre ul directo */
+  display: inline-block;
+}
+.header__nav--menu > li > li > i {
+  /* Diseño de los íconos del menú desplegable */
+  width: 7px;
+  color: #e2c713;
+}
+
+#down {
+  /* Icono Barra abajo del Menú Responsive enlace "Colecciones" */
+  display: none;
 }
 
 /***** ESTILOS GENERALES DE LOS ENCABEZADOS *****/
 .header__h1 {
-	/* Título principal de todas las páginas*/
-	padding: 10px;
-	margin-top: 20px;
-	margin-bottom: 5px;
-	font-size: 3rem;
-	text-align: center;
-	text-transform: uppercase;
-	line-height: 50px;
+  /* Título principal de todas las páginas*/
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
 }
+
 .header__h2 {
-	/* Título secundario de todas las páginas*/
-	padding: 5px;
-	margin: 10px 50px;
-	font-size: 2rem;	
+  /* Título secundario de todas las páginas*/
+  padding: 5px;
+  margin: 10px 50px;
+  font-size: 2rem;
 }
+
 .header__img {
-	/* Imagen principal de todas las páginas (en caso de existir)*/
-	display: block;
-	margin: auto;
-	filter: drop-shadow(7px 7px 15px #000);
-	width: 50%;
+  /* Imagen principal de todas las páginas (en caso de existir)*/
+  display: block;
+  margin: auto;
+  filter: drop-shadow(7px 7px 15px #000);
+  width: 50%;
 }
 
 /***** ESTILOS GENERALES DE LOS ARTICULOS *****/
 main {
-	/* Medida de las dos secciones: article,aside/bootstrap */
-	width: 99vw;
+  /* Medida de las dos secciones: article,aside/bootstrap */
+  width: 99vw;
 }
+
 .section__h2 {
-	/* Config de los títulos del blog */
-	padding: 5px;
-	margin: 10px 40px;
-	font-size: 2rem;
+  /* Config de los títulos del blog */
+  padding: 5px;
+  margin: 10px 40px;
+  font-size: 2rem;
 }
+
 .section__h3 {
-	/* Config de los sub títulos del blog */
-	padding: 5px;
-	margin: 10px 25px;
-	font-size: 1.5rem;
+  /* Config de los sub títulos del blog */
+  padding: 5px;
+  margin: 10px 25px;
+  font-size: 1.5rem;
 }
+
 .section__text {
-	/* Config del articulo del blog */
-	padding: 5px;
-	margin: 10px 25px;
-	font-size: 1rem;
-	text-align: justify;
+  /* Config del articulo del blog */
+  padding: 5px;
+  margin: 10px 25px;
+  font-size: 1rem;
+  text-align: justify;
 }
+
 .section__list {
-	/* Config de las listas del blog */
-	padding: 5px;
-	margin: 10px 70px;
-	font-size: 1rem;
+  /* Config de las listas del blog */
+  padding: 5px;
+  margin: 10px 70px;
+  font-size: 1rem;
 }
 .section__list li::marker {
-	/* Config de los bullets de las listas del blog */
-	color: rgb(255,0,0);
-	font-weight: bold;
+  /* Config de los bullets de las listas del blog */
+  color: rgb(255, 0, 0);
+  font-weight: bold;
 }
+
 .section__img {
-	/* Configs de las imágenes del blog */
-	display: block;
-	width: 400px;
-	margin: 10px 300px;
-	border: #000 1px solid;
+  /* Configs de las imágenes del blog */
+  display: block;
+  width: 400px;
+  margin: 10px 300px;
+  border: #000 1px solid;
 }
+
 .section__img--li {
-	/* Config de posicionamiento de las imágenes dentro de las listas */
-	display: block;
-	margin: 10px 225px;
+  /* Config de posicionamiento de las imágenes dentro de las listas */
+  display: block;
+  margin: 10px 225px;
 }
-.section__div--img img{
-	/* Config del posicionamiento de las imágenes dobles */
-	display: inline-block;
-	margin: 0 2em 0 2em;
+
+.section__div--img img {
+  /* Config del posicionamiento de las imágenes dobles */
+  display: inline-block;
+  margin: 0 2em 0 2em;
 }
+
 .section__table {
-	/* Config de la tabla del index */
-	max-width: 65vw;
-	margin: 20px auto;
+  /* Config de la tabla del index */
+  max-width: 65vw;
+  margin: 20px auto;
 }
+
 #megarace {
-	/* Config de la tabla de la página MegaRace */
-	max-width: 60vw;
-	margin: 10px auto;
+  /* Config de la tabla de la página MegaRace */
+  max-width: 60vw;
+  margin: 10px auto;
 }
 
-/* ESTILOS GENERALES DEL FORMULARIO DE CONTACTO */
+/***** ESTILOS GENERALES DEL FORMULARIO DE CONTACTO *****/
 #contacto {
-	/* Config de la hoja formulario */
-	margin: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
-	gap: 10px;
-}
-.suscribe {
-	/* Distribución de Suscribe */
-	grid-column: 1 / 2;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.aportes {
-	/* Distribución de Contacto */
-	grid-column: 2 / 4;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  /* Config de la hoja formulario */
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
 }
 
-/* ESTILOS DE LOS INPUTS */
+.suscribe {
+  /* Distribución de Suscribe */
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aportes {
+  /* Distribución de Contacto */
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/***** ESTILOS DE LOS INPUTS *****/
 .section__input {
-	/* Estilo en reposo Input de subs y contacto */
-	width: 60%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border: none;
-	border-bottom: #2C7CBC 2px solid;
-	background: transparent;
-	font-size: 18px;
+  /* Estilo en reposo Input de subs y contacto */
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: #2C7CBC 2px solid;
+  background: transparent;
+  font-size: 18px;
 }
 .section__input:focus {
-	/* Estilo en uso input de subs y contacto */
-	outline-color: #2C7CBC;
+  /* Estilo en uso input de subs y contacto */
+  outline-color: #2C7CBC;
 }
-.section__input:valid{
-	/* Estilo del imput con los valores correctos */
-	border: 2px solid #25d366;
+.section__input:valid {
+  /* Estilo del imput con los valores correctos */
+  border: 2px solid #25d366;
 }
 .section__input::placeholder {
-	/* Color del texto predeterminado */
-	color: #a9a9a9;
+  /* Color del texto predeterminado */
+  color: #a9a9a9;
 }
+
 .section__button {
-	/* Estilo en pasivo de los botones subs y enviar */
-	width: 40%;
-    height: 45px;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #004a86, #2C7CBC) ;
-    font-size: 20px;
-	overflow: hidden;
-	transition: all 0.7s;
+  /* Estilo en pasivo de los botones subs y enviar */
+  width: 40%;
+  height: 45px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #004a86, #2C7CBC);
+  font-size: 20px;
+  overflow: hidden;
+  transition: all 0.7s;
 }
+.section__button:hover {
+  /* Estilo en uso de los botones subs y enviar */
+  overflow: visible;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
+  color: #bbb;
+}
+
 .send {
-	/* Estilo en pasivo del boton enviar */
-	width: 15%;
+  /* Estilo en pasivo del boton enviar */
+  width: 15%;
 }
-.section__button:hover{
-	/* Estilo en uso de los botones subs y enviar */
-    overflow: visible;
-	cursor:pointer;
-    transform: scale(1.1);
-    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
-	color: #bbb;
-}
+
 .textarea {
-	/* Estilo y configs del textarea */
-	min-width: 400px;
-	min-height: 100px;
-	resize: none;
+  /* Estilo y configs del textarea */
+  min-width: 400px;
+  min-height: 100px;
+  resize: none;
 }
 
 /***** ESTILOS GENERALES PARA LOS ASIDE *****/
 .aside {
-	/* Configs de los Contenido+ de las páginas (donde se encuentren) */
-	position: sticky;
-	top: 25px;
-	margin: 10px;
-	border: solid 2px #000;
-	border-radius: 25px;
-	display: flex;
-	flex-direction: column;
-	background: linear-gradient(to left, #7CACD4, #4C7AAA); /*#2c3e50*/
-}
-.aside__h2 {
-	/* Título de Contenido+ de los aside */
-	padding: 10px;
-	text-align: center;	
-	font-size: xx-large;
-	color: #f7f2dc;
-	text-transform: uppercase;
-}
-.aside__div {
-	/* Posicionamiento de los elementos a visualizar (imagenes, videos, etc) */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.aside__div--video {
-	/* Config específica de los videos del Contenido+ */
-	height: 200px;
-}
-.aside__div--sound {
-	/* Config específica de las playlist del contenido+ */
-	height: 90px;
+  /* Configs de los Contenido+ de las páginas (donde se encuentren) */
+  position: sticky;
+  top: 25px;
+  margin: 10px;
+  border: solid 2px #000;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to left, #7CACD4, #4C7AAA);
 }
 .aside a {
-	/* Config de los links a los distintos contenidos */
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	color: #f7f2dc;
-	font-weight: bolder;
-	padding-top: 3px;
-	padding-bottom: 5px;
+  /* Config de los links a los distintos contenidos */
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #f7f2dc;
+  font-weight: bolder;
+  padding-top: 3px;
+  padding-bottom: 5px;
 }
 .aside img {
-	/* Configs de las imágenes de los Contenido+ */
-	width: 110px;
-	padding: 4px;
-	transition: transform 0.9s;
+  /* Configs de las imágenes de los Contenido+ */
+  width: 110px;
+  padding: 4px;
+  transition: transform 0.9s;
+}
+.aside img:hover {
+  /* Animación para los hover de los aside */
+  transform: scale(1.1);
 }
 .aside iframe {
-	/* Config de los Iframes */
-	transition: transform 1.5s;
+  /* Config de los Iframes */
+  transition: transform 1.5s;
 }
-.aside img:hover, .aside iframe:hover {
-	/* Animación para los hover de los aside */
-	transform: scale(1.1);
+.aside iframe:hover {
+  /* Animación para los hover de los aside */
+  transform: scale(1.1);
 }
+
+.aside__h2 {
+  /* Título de Contenido+ de los aside */
+  padding: 10px;
+  text-align: center;
+  font-size: xx-large;
+  color: #f7f2dc;
+  text-transform: uppercase;
+}
+
+.aside__div {
+  /* Posicionamiento de los elementos a visualizar (imagenes, videos, etc) */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aside__div--video {
+  /* Config específica de los videos del Contenido+ */
+  height: 200px;
+}
+
+.aside__div--sound {
+  /* Config específica de las playlist del Contenido+ */
+  height: 90px;
+}
+
 .aside__text {
-	/* Texto de la página Nosotros */
-	padding: 5px;
-	margin: 0px 10px;
-	font-size: 16px;
-	text-align: center;
-	color: #fff;
+  /* Texto de la página Nosotros */
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.galery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: auto 50px;
+}
+.galery img {
+  width: 275px;
+  padding: 5px;
+  opacity: 90%;
+  filter: grayscale(50%);
+  transition: all 0.8s;
+  z-index: 9;
+}
+.galery img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.07);
+  z-index: 10;
+}
+
+.regreso {
+  margin: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.regreso__a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2em;
+}
+
+.regreso__i {
+  font-size: 1.2em;
 }
 
 /***** ESTILOS GENERALES PARA LOS FOOTERS *****/
 .footer--grid {
-	/* Configs de posicionamiento del footer */
-	margin-top: auto;
-	padding: 10px 0;
-	font-size: 14px;
-	background-color: #2C7CBC;
-	color: #e9e9e9;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  /* Configs de posicionamiento del footer */
+  margin-top: auto;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: #2C7CBC;
+  color: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer--grid p {
-	/* Reseteo de los márgenes de Bootstrap en el footer */
-	margin-bottom: 0;
-}
-.footer__contacto {
-	/* Dirección específica de la página de Contacto */
-	flex-direction: row;
-	justify-content: space-evenly;
+  /* Reseteo de los márgenes de Bootstrap en el footer */
+  margin-bottom: 0;
 }
 .footer--grid a {
-	/* Decoración del link que lleva a Contacto */
-	color: #000;
+  /* Decoración del link que lleva a Contacto */
+  color: #000;
 }
+
+.footer__contacto {
+  /* Dirección específica de la página de Contacto */
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .footer__div:last-child {
-	/* Config del segundo div hijo de footer */
-	display: flex;
+  /* Config del segundo div hijo de footer */
+  display: flex;
 }
-.footer__div--copy, .footer__div--socialmedia {
-	/* config de los hijos del segundo div hijo del footer */
-	margin: 0 3rem;
+
+.footer__div--copy {
+  /* config de los hijos del segundo div hijo del footer */
+  margin: 0 3rem;
 }
+
 .footer__div--socialmedia {
-	/* Aparienca de los enlaces e íconos de redes sociales */
-	display: flex;
-	align-items: center;
-	font-size: 14px;
+  /* config de los hijos del segundo div hijo del footer */
+  margin: 0 3rem;
+  /* Aparienca de los enlaces e íconos de redes sociales */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
-.footer__div--socialmedia a{
-	/* Configs de los links de las redes sociales */
-	text-decoration: none;
-	color: #fff;
-	margin-right: 5px;
-	margin-left: 5px;
+.footer__div--socialmedia a {
+  /* Configs de los links de las redes sociales */
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .footer__div--socialmedia i {
-	/* Configs de los íconos de las redes sociales */
-	font-size: 25px;
-	cursor: pointer;
+  /* Configs de los íconos de las redes sociales */
+  font-size: 25px;
+  cursor: pointer;
 }
 
-
-.galery--grid img {
-	width: 280px;
-	padding: 10px;
-}
-.galery--grid {
-	display: grid;
-	border: #000 1px solid;
-	grid-template-columns: repeat(5, 1fr);
-	margin: 15px auto;
-}
-
-/* RESPONSIVE DESIGN */
-
+/***** RESPONSIVE DESIGN *****/
 @media (max-width: 800px) {
-	.row {
-		/* Reseteo de Bootstrap */
-    	margin: 0;
-	}
-	/***** ENCABEZADO Y NAVMENÚ *****/
-	.header--grid {
-		/* Posicionamiento del body en Responsive */
-        padding-top: 55px;
-    }
-    .header__nav {
-		/* Configu del NavBar con Botón */
-		display: flex;
-		justify-content: space-between;
-        position: fixed;
-        width: 100%;
-		z-index: 1000;
-    }
-    .header__label {
-		/* Config del Botón */
-        display: block;
-        cursor: pointer;
-		margin: auto 50px;
-    }
-	.header__nav a > img {
-		/* Config de la imagen en Responsive */
-		display: block;
-		margin: auto 50px;
-	}
-    #down {
-		/* Icono desplegable de "Colecciones" */
-        display: inline-block;
-        position: relative;
-        bottom: 3px;
-        margin-left: 10px;
-        margin-right: 0;
-    }
-    .header__nav--menu {
-		/* Posicionamiento de los enlaces */
-        position: fixed;
-        top: 4em;
-        bottom: 0;
-        width: 30%;
-        right: 0;
-    }
-    .header__nav--menu ul {
-		/* Config del menú escondido */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-		/* Animación del menú escondido */
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-        transition: all 0.7s ease-in-out;
-    }
-	.header__input:checked + .header__nav--menu ul {
-		/* Animación del menú al desplegarse */
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .header__nav--menu li {
-		/* Decoración y posición de los enlaces */
-        width: 100%;
-        border-bottom: 1px solid #000;
-        text-align: center;
-    }
-    .header__nav--menu li ul {
-		/* Config de la lista desplegable */
-        width: 100%;
-        position: relative;
-		top: 0;
-        display: flex;
-		flex-direction: column;
-    }
-    .header__nav--menu li li {
-		/* Estilo de la lista desplegable */
-        border: none;
-    }
-    .header__item {
-		/* Config de los enlaces */
-        margin: 15px 0;
-    }
-    .header__h2, .section__h2, .section__h3 {
-		/* Posicionamiento de los títulos y subtítulos */
-		text-align: center;
-	}
-	.header__img {
-		/* Posicionamiento de las imágenes de la cabecera */
-		width: auto;
-	}
-	/***** ARTÍCULO PRINCIPAL *****/
-	.section__img {
-		/* Posicionamiento de las imágenes */
-		margin: 10px auto;
-	}
-	.section__div--img img {
-		/* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
-		width: 310px;
-		margin: 1 auto;
-	}
-	/***** ASIDE *****/
-	.aside--grid {
-		/* Tamaño del Aside */
-		width: 80%;
-		margin: auto;
-	}
-	.aside__div--img {
-		/* Distribución de las imágenes del Aside */
-		gap: 5px 20px;
-	}
-	.aside img:hover, .aside iframe:hover {
-		/* Animación para los hover de los aside */
-		transform: none;
-	}
-	/***** FORMULARIO DE CONTACTO *****/
-	#contacto {
-		/* Config del apartado del formulario de contacto */
-		display: flex;
-		flex-direction: column;
-		margin: auto;
-	}
-	.section__button {
-		/* Botón suscribirse */
-		width: 30%;
-	}
-	.send {
-		/* Botón enviar */
-		width: 20%;
-	}
-	/***** PIE DE PÁGINA *****/
-	.footer--grid {
-		/* Config del footer */
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		padding: 10px 0;
-	}
-	.footer__contacto {
-		/* Posicionamiento del primer hijo del footer */
-		display: flex;
-		flex-direction: row;
-	}
-	.footer__div:last-child {
-		/* Posicionamientro del segundo hijo del footer */
-		line-height: 35px;
-	}
-	.footer__responsive{
-		/* Copyright */
-		display: block;
-	}
-	.footer__div--socialmedia {
-		/* Posicionamiento de los íconos de redes */
-		display: flex;
-		justify-content: center;
-	}
-	.footer__div--socialmedia i {
-		/* Íconos de Redes */
-		margin: 0 10px
-	}
+  .row {
+    /* Reseteo de Bootstrap */
+    margin: 0;
+  }
+  /***** ENCABEZADO Y NAVMENÚ *****/
+  .header--grid {
+    /* Posicionamiento del body en Responsive */
+    padding-top: 55px;
+  }
+  .header__nav {
+    /* Configu del NavBar con Botón */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .header__nav a > img {
+    /* Config de la imagen en Responsive */
+    display: block;
+    margin: auto 50px;
+  }
+  .header__label {
+    /* Config del Botón */
+    display: block;
+    cursor: pointer;
+    margin: auto 50px;
+  }
+  #down {
+    /* Icono desplegable de "Colecciones" */
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  .header__nav--menu {
+    /* Posicionamiento de los enlaces */
+    position: fixed;
+    top: 4em;
+    bottom: 0;
+    width: 30%;
+    right: 0;
+  }
+  .header__nav--menu ul {
+    /* Config del menú escondido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Animación del menú escondido */
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: all 0.7s ease-in-out;
+  }
+  .header__nav--menu li {
+    /* Decoración y posición de los enlaces */
+    width: 100%;
+    border-bottom: 1px solid #000;
+    text-align: center;
+  }
+  .header__nav--menu li ul {
+    /* Config de la lista desplegable */
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__nav--menu li li {
+    /* Estilo de la lista desplegable */
+    border: none;
+  }
+  .header__input:checked + .header__nav--menu ul {
+    /* Animación del menú al desplegarse */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header__item {
+    /* Config de los enlaces */
+    margin: 15px 0;
+  }
+  .header__img {
+    /* Posicionamiento de las imágenes de la cabecera */
+    width: auto;
+  }
+  .header__h2 {
+    /* Posicionamiento de los títulos y subtítulos */
+    text-align: center;
+  }
+  .section__h2 {
+    /* Posicionamiento de los títulos y subtítulos */
+    text-align: center;
+  }
+  .section__h3 {
+    /* Posicionamiento de los títulos y subtítulos */
+    text-align: center;
+  }
+  /***** ARTÍCULO PRINCIPAL *****/
+  .section__img {
+    /* Posicionamiento de las imágenes */
+    margin: 10px auto;
+  }
+  .section__div--img img {
+    /* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+    width: 310px;
+    margin: 1 auto;
+  }
+  /***** ASIDE *****/
+  .aside--grid {
+    /* Tamaño del Aside */
+    width: 80%;
+    margin: auto;
+  }
+  .aside__div--img {
+    /* Distribución de las imágenes del Aside */
+    gap: 5px 20px;
+  }
+  .aside img:hover {
+    /* Animación para los hover de los aside */
+    transform: none;
+  }
+  .aside iframe:hover {
+    /* Animación para los hover de los aside */
+    transform: none;
+  }
+  /***** FORMULARIO DE CONTACTO *****/
+  #contacto {
+    /* Config del apartado del formulario de contacto */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .section__button {
+    /* Botón suscribirse */
+    width: 30%;
+  }
+  .send {
+    /* Botón enviar */
+    width: 20%;
+  }
+  /***** PIE DE PÁGINA *****/
+  .footer--grid {
+    /* Config del footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .footer__contacto {
+    /* Posicionamiento del primer hijo del footer */
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__div:last-child {
+    /* Posicionamientro del segundo hijo del footer */
+    line-height: 35px;
+  }
+  .footer__responsive {
+    /* Copyright */
+    display: block;
+  }
+  .footer__div--socialmedia {
+    /* Posicionamiento de los íconos de redes */
+    display: flex;
+    justify-content: center;
+  }
+  .footer__div--socialmedia i {
+    /* Íconos de Redes */
+    margin: 0 10px;
+  }
 }
-@media (max-width:428px) {
-	/***** ENCABEZADO Y NAVMENÚ *****/
-	.header__nav--menu {
-		/* Tamaño de la barra oculta */
-		width: 55%;
-	}
-	.header__h1 {
-		/* Config del título del encabezado */
-		font-size: 2rem;
-		line-height: 35px;
-		letter-spacing: 3px;
-	}
-	.header__img {
-		/* Tamaño de la imagén del encabezado */
-		width: 400px;
-	}
-	.header__h2 {
-		/* Tamaño del sutítulo del encabezado */
-		font-size: 1.5rem;
-		padding: 0;
-	}
-	.header__responsive {
-		/* Span dentro del nombre del título para su distribución correcta */
-		display: block;
-	}
-	/***** ARTÍCULO PRINCIPAL *****/
-	.section__list {
-		/* Posicionamiento de las listas */
-		margin: 0px 30px;
-	}
-	.section__img {
-		/* Config de las imágenes */
-		width: 300px;
-		margin: 10px auto;
-	}
-	.section__img--li {
-		/* Config de las imágenes dentro de las listas */
-		width: 300px;
-	}
-	.section__div--img img {
-		/* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
-		display: flex;
-		width: 300px;
-		margin: 10px auto;
-	}
-	/***** FORMULARIO DE CONTACTO *****/
-	.section__button {
-		/* Tamaño del botón de suscribirse */
-		width: 40%;
-	}
-	.send {
-		/* Tamaño del botón de enviar */
-		margin-bottom: 15px;
-		width: 30%;
-	}
-	.section__input {
-		/* Tamaño de los inputs del formulario */
-		width: 75%;
-	}
-	.textarea {
-		/* Tamaño del textarea del formulario */
-		min-width: 321px;
-	}
-	/***** ASIDE *****/
-	.aside--grid {
-		/* Posicionamiento del contenido+ */
-		width: 100%;
-		margin: auto;
-	}
-	.aside__div--img {
-		/* Separación de las imágenes dentro de contenido+ */
-		gap: 0;
-	}
-	.aside__div--img img {
-		/* Tamaño de las imágenes del contenido+ */
-		width: 80px;
-	}
-	.aside__div--sound iframe {
-		/* Tamaño de la barra de lista de reproducción del contenido+ */
-		width: 300px;
-	}
-	.aside img:hover, .aside iframe:hover {
-		/* Animación para los hover de los aside */
-		transform: none;
-	}
-	.aside__responsive {
-		/* Span dentro del ancla Kile Petty para su distribución correcta */
-		display: block;
-	}
-	/***** PÍE DE PÁGINA *****/
-	.footer__div:first-child p {
-		/* Posicionamiento del texto de suscribirse */
-		margin: 2px;
-	}
-	.footer__div:last-child {
-		/* Posicionamiento del div que contiene copy y socialmedia */
-		align-items: center;
-		justify-content: space-around;
-		gap: 20px;
-	}
-	.footer__div--copy {
-		/* Config de Copyright */
-		line-height: 30px;
-		margin: 0;
-	}
-	.footer__div--socialmedia {
-		/* Posicionamiento de los íconos de redes sociales */
-		flex-direction: column;
-		margin: 0;
-	}
+@media (max-width: 428px) {
+  /***** ENCABEZADO Y NAVMENÚ *****/
+  .header__nav--menu {
+    /* Tamaño de la barra oculta */
+    width: 55%;
+  }
+  .header__h1 {
+    /* Config del título del encabezado */
+    font-size: 2rem;
+    line-height: 35px;
+    letter-spacing: 3px;
+  }
+  .header__img {
+    /* Tamaño de la imagén del encabezado */
+    width: 400px;
+  }
+  .header__h2 {
+    /* Tamaño del sutítulo del encabezado */
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .header__responsive {
+    /* Span dentro del nombre del título para su distribución correcta */
+    display: block;
+  }
+  /***** ARTÍCULO PRINCIPAL *****/
+  .section__list {
+    /* Posicionamiento de las listas */
+    margin: 0 30px;
+  }
+  .section__img {
+    /* Config de las imágenes */
+    width: 300px;
+    margin: 10px auto;
+  }
+  .section__img--li {
+    /* Config de las imágenes dentro de las listas */
+    width: 300px;
+  }
+  .section__div--img img {
+    /* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+    display: flex;
+    width: 300px;
+    margin: 10px auto;
+  }
+  /***** FORMULARIO DE CONTACTO *****/
+  .section__button {
+    /* Tamaño del botón de suscribirse */
+    width: 40%;
+  }
+  .send {
+    /* Tamaño del botón de enviar */
+    margin-bottom: 15px;
+    width: 30%;
+  }
+  .section__input {
+    /* Tamaño de los inputs del formulario */
+    width: 75%;
+  }
+  .textarea {
+    /* Tamaño del textarea del formulario */
+    min-width: 321px;
+  }
+  /***** ASIDE *****/
+  .aside--grid {
+    /* Posicionamiento del contenido+ */
+    width: 100%;
+    margin: auto;
+  }
+  .aside__div--img {
+    /* Separación de las imágenes dentro de contenido+ */
+    gap: 0;
+  }
+  .aside__div--img img {
+    /* Tamaño de las imágenes del contenido+ */
+    width: 80px;
+  }
+  .aside__div--sound iframe {
+    /* Tamaño de la barra de lista de reproducción del contenido+ */
+    width: 300px;
+  }
+  .aside img:hover {
+    /* Animación para los hover de los aside */
+    transform: none;
+  }
+  .aside iframe:hover {
+    /* Animación para los hover de los aside */
+    transform: none;
+  }
+  .aside__responsive {
+    /* Span dentro del ancla Kile Petty para su distribución correcta */
+    display: block;
+  }
+  /***** PÍE DE PÁGINA *****/
+  .footer__div:first-child p {
+    /* Posicionamiento del texto de suscribirse */
+    margin: 2px;
+  }
+  .footer__div:last-child {
+    /* Posicionamiento del div que contiene copy y socialmedia */
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .footer__div--copy {
+    /* Config de Copyright */
+    line-height: 30px;
+    margin: 0;
+  }
+  .footer__div--socialmedia {
+    /* Posicionamiento de los íconos de redes sociales */
+    flex-direction: column;
+    margin: 0;
+  }
 }
+
+/*# sourceMappingURL=estilo.css.map */

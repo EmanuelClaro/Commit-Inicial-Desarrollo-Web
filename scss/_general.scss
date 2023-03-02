@@ -1,0 +1,29 @@
+/***** ESTILO GENERAL DEL SITIO WEB *****/
+* {
+    /* Medidas Resets de las páginas */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+    /* Estilos y Configs del Body */
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+	line-height: 1.7em;
+	overflow-x: hidden;
+    /* Config para el Footer al Píe de la Página */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+    /* Estilo del fondo de la página */
+	background-image: url(../multimedia/shattered.png);
+	background-attachment: fixed;
+}
+.italic {
+    /* Spans en formato Italic */
+	font-style: italic;
+}
+.bold {
+    /* Spans en formato Bold */
+	font-weight: bold;
+}

@@ -1,0 +1,55 @@
+/***** ESTILOS GENERALES PARA LOS FOOTERS *****/
+.footer--grid {
+    /* Configs de posicionamiento del footer */
+	margin-top: auto;
+	padding: 10px 0;
+	font-size: 14px;
+	background-color: $background-color_4;
+	color: $color_8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+        /* Reseteo de los márgenes de Bootstrap en el footer */
+		margin-bottom: 0;
+	}
+	a {
+        /* Decoración del link que lleva a Contacto */
+		color: $color_2;
+	}
+}
+.footer__contacto {
+    /* Dirección específica de la página de Contacto */
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.footer__div {
+	&:last-child {
+        /* Config del segundo div hijo de footer */
+		display: flex;
+	}
+}
+.footer__div--copy {
+    /* config de los hijos del segundo div hijo del footer */
+	margin: 0 3rem;
+}
+.footer__div--socialmedia {
+    /* config de los hijos del segundo div hijo del footer */
+	margin: 0 3rem;
+    /* Aparienca de los enlaces e íconos de redes sociales */
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	a {
+        /* Configs de los links de las redes sociales */
+		text-decoration: none;
+		color: $color_1;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	i {
+        /* Configs de los íconos de las redes sociales */
+		font-size: 25px;
+		cursor: pointer;
+	}
+}

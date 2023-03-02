@@ -1,0 +1,66 @@
+/***** ESTILOS GENERALES DE LOS ARTICULOS *****/
+main {
+    /* Medida de las dos secciones: article,aside/bootstrap */
+	width: 99vw;
+}
+.section__h2 {
+    /* Config de los títulos del blog */
+	padding: 5px;
+	margin: 10px 40px;
+	font-size: 2rem;
+}
+.section__h3 {
+    /* Config de los sub títulos del blog */
+	padding: 5px;
+	margin: 10px 25px;
+	font-size: 1.5rem;
+}
+.section__text {
+    /* Config del articulo del blog */
+	padding: 5px;
+	margin: 10px 25px;
+	font-size: 1rem;
+	text-align: justify;
+}
+.section__list {
+    /* Config de las listas del blog */
+	padding: 5px;
+	margin: 10px 70px;
+	font-size: 1rem;
+	li {
+		&::marker {
+            /* Config de los bullets de las listas del blog */
+			color: $color_4;
+			font-weight: bold;
+		}
+	}
+}
+.section__img {
+    /* Configs de las imágenes del blog */
+	display: block;
+	width: 400px;
+	margin: 10px 300px;
+	border: #000 1px solid;
+}
+.section__img--li {
+    /* Config de posicionamiento de las imágenes dentro de las listas */
+	display: block;
+	margin: 10px 225px;
+}
+.section__div--img {
+	img {
+        /* Config del posicionamiento de las imágenes dobles */
+		display: inline-block;
+		margin: 0 2em 0 2em;
+	}
+}
+.section__table {
+    /* Config de la tabla del index */
+	max-width: 65vw;
+	margin: 20px auto;
+}
+#megarace {
+    /* Config de la tabla de la página MegaRace */
+	max-width: 60vw;
+	margin: 10px auto;
+}

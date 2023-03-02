@@ -1,0 +1,78 @@
+/***** ESTILOS GENERALES DEL FORMULARIO DE CONTACTO *****/
+#contacto {
+    /* Config de la hoja formulario */
+	margin: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 10px;
+}
+.suscribe {
+    /* Distribución de Suscribe */
+	grid-column: 1 / 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.aportes {
+    /* Distribución de Contacto */
+	grid-column: 2 / 4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/***** ESTILOS DE LOS INPUTS *****/
+.section__input {
+    /* Estilo en reposo Input de subs y contacto */
+	width: 60%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: #2C7CBC 2px solid;
+	background: transparent;
+	font-size: 18px;
+	&:focus {
+        /* Estilo en uso input de subs y contacto */
+		outline-color: $outline-color_1;
+	}
+	&:valid {
+        /* Estilo del imput con los valores correctos */
+		border: 2px solid #25d366;
+	}
+	&::placeholder {
+        /* Color del texto predeterminado */
+		color: $color_5;
+	}
+}
+.section__button {
+    /* Estilo en pasivo de los botones subs y enviar */
+	width: 40%;
+	height: 45px;
+	border-radius: 4px;
+	border: none;
+	color: $color_1;
+	text-transform: uppercase;
+	background: linear-gradient(to right, #004a86, #2C7CBC);
+	font-size: 20px;
+	overflow: hidden;
+	transition: all 0.7s;
+	&:hover {
+        /* Estilo en uso de los botones subs y enviar */
+		overflow: visible;
+		cursor: pointer;
+		transform: scale(1.1);
+		transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
+		color: $color_6;
+	}
+}
+.send {
+    /* Estilo en pasivo del boton enviar */
+	width: 15%;
+}
+.textarea {
+    /* Estilo y configs del textarea */
+	min-width: 400px;
+	min-height: 100px;
+	resize: none;
+}
