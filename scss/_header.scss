@@ -1,3 +1,8 @@
+@mixin titulos ($espaciado, $margen, $size) {
+    padding: $espaciado;
+    margin: $margen $margen;
+    font-size: $size;
+}
 /***** ESTILOS GENERALES DE LOS ENCABEZADOS *****/
 .header__h1 {
     /* Título principal de todas las páginas*/
@@ -11,9 +16,7 @@
 }
 .header__h2 {
     /* Título secundario de todas las páginas*/
-	padding: 5px;
-	margin: 10px 50px;
-	font-size: 2rem;
+	@include titulos(5px, 10px 50px, 2rem);
 }
 .header__img {
     /* Imagen principal de todas las páginas (en caso de existir)*/

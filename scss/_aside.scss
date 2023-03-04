@@ -1,3 +1,8 @@
+@mixin texto ($espaciado, $margen, $size) {
+    padding: $espaciado;
+    margin: $margen $margen;
+    font-size: $size;
+}
 /***** ESTILOS GENERALES PARA LOS ASIDE *****/
 .aside {
     /* Configs de los Contenido+ de las páginas (donde se encuentren) */
@@ -65,9 +70,7 @@
 }
 .aside__text {
     /* Texto de la página Nosotros */
-	padding: 5px;
-	margin: 0 10px;
-	font-size: 16px;
+	@include texto(5px, 0 10px, 1rem);
 	text-align: center;
 	color: $color_1;
 }

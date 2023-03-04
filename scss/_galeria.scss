@@ -1,3 +1,8 @@
+@mixin flex {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
 .line {
 	/* Línea decorativa de Galería */
 	width: 90%;
@@ -23,18 +28,14 @@
 		}
 	}
 	/* Config de la distribución de la Galería */
-	display: flex;
+	@include flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
 	gap: 10px;
 }
 .regreso {
 	/* Línea de Regreso*/
 	margin: 10px 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex;
 	gap: 1em;
 }
 .regreso__a {

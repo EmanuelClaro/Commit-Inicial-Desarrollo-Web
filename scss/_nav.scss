@@ -45,7 +45,7 @@
 	transition: 0.5s;
 	&:hover {
         /* Animación de los links de la lista visible y desplegable */
-		color: $color_2;
+		color: $color_3;
 	}
 }
 .header__input {
@@ -83,7 +83,7 @@
             /* Config de los elementos de la lista desplegable */
 			display: block;
 			position: absolute;
-			top: 64px;
+			top: 3.54em;
 			z-index: 10;
 			text-transform: none;
 		}
