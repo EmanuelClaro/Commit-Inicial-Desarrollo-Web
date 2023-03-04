@@ -3,14 +3,6 @@
     /* Config básica del NavbBar */
 	background-color: $background-color_2;
 	height: 4em;
-	a {
-		>img {
-            /* Configs de la Imagen */
-			display: flex;
-			align-items: center;
-			margin: 0 50px;
-		}
-	}
 }
 .header__container {
     /* Config del posicionamiento del NavBar Desktop */
@@ -47,6 +39,25 @@
         /* Animación de los links de la lista visible y desplegable */
 		color: $color_3;
 	}
+}
+.header__div {
+	/* Config del contenedor del logo y el nombre de la página */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.header__svg {
+	/* Configs del SVG logo */
+	width: 95px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.header__logo {
+	/* Config del Título Logo */
+	text-decoration: none;
+	font-weight: bold;
+	color: $color_1;
 }
 .header__input {
 	&:checked {

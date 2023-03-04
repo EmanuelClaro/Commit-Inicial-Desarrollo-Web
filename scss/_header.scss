@@ -25,3 +25,11 @@
 	filter: drop-shadow(7px 7px 15px #000);
 	width: 50%;
 }
+.header__img--principal {
+	/* Config especial para imagen de la pag ppal */
+	width: 20%;
+}
+.header__img--megarace {
+	/* Config especial para imagen de MegaRace */
+	filter: drop-shadow(7px 7px 15px #fff);
+}

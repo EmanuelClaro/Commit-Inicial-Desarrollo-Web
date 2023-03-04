@@ -16,13 +16,10 @@
 		position: fixed;
 		width: 100%;
 		z-index: 1000;
-		a {
-			>img {
-                /* Config de la imagen en Responsive */
-				display: block;
-				margin: auto 50px;
-			}
-		}
+	}
+	.header__div {
+		/* Posicionamiento del logo de la página */
+		margin-left: 0px;
 	}
 	.header__label {
         /* Config del Botón */
@@ -122,6 +119,10 @@
 			margin: 1 auto;
 		}
 	}
+	.section__img--nosotros {
+		/* Config de las imágenes de Nosotros */
+		margin-inline: 30px;
+	}
 	/***** GALERÍA *****/
 	.line {
 		/* Línea decorativa */
@@ -174,6 +175,10 @@
 				transform: none;
 			}
 		}
+	}
+	.aside--nosotros {
+		/* Espaciado de los Aside de Nosotros */
+		margin-block: 1rem;
 	}
     /***** PIE DE PÁGINA *****/
 	.footer--grid {
@@ -250,6 +255,10 @@
 	}
 	.section__div--img {
 		flex-direction: column;
+	}
+	.section__img--nosotros {
+		/* Config de las imágenes de Nosotros */
+		float: none;
 	}
 	.section__responsive {
 		/* Span dentro del section para su distribución correcta */

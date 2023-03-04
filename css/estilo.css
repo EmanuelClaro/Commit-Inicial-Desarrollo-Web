@@ -40,12 +40,6 @@ body {
   background-color: #045CAC;
   height: 4em;
 }
-.header__nav a > img {
-  /* Configs de la Imagen */
-  display: flex;
-  align-items: center;
-  margin: 0 50px;
-}
 
 .header__container {
   /* Config del posicionamiento del NavBar Desktop */
@@ -84,6 +78,28 @@ body {
 .header__item:hover {
   /* Animación de los links de la lista visible y desplegable */
   color: #e2c713;
+}
+
+.header__div {
+  /* Config del contenedor del logo y el nombre de la página */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__svg {
+  /* Configs del SVG logo */
+  width: 95px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.header__logo {
+  /* Config del Título Logo */
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
 }
 
 .header__input {
@@ -187,6 +203,16 @@ body {
   width: 50%;
 }
 
+.header__img--principal {
+  /* Config especial para imagen de la pag ppal */
+  width: 20%;
+}
+
+.header__img--megarace {
+  /* Config especial para imagen de MegaRace */
+  filter: drop-shadow(7px 7px 15px #fff);
+}
+
 /***** ESTILOS GENERALES DE LOS ARTICULOS *****/
 main {
   /* Medida de las dos secciones: article,aside/bootstrap */
@@ -251,6 +277,21 @@ main {
   display: flex;
   justify-content: center;
   gap: 0;
+}
+
+.section__img--nosotros {
+  border: none;
+  border-radius: 25px;
+  margin-inline: 40px;
+}
+
+.section__img--a {
+  width: 350px;
+  float: right;
+}
+
+.section__img--b {
+  float: left;
 }
 
 .section__table {
@@ -391,7 +432,14 @@ main {
 }
 
 .aside--megarace {
+  /* Posicionamiento del Aside Mega Race */
   top: 80px;
+}
+
+.aside--nosotros {
+  /* Config del Aside Nosotros */
+  position: inherit;
+  margin-block: 3rem;
 }
 
 .aside__h2 {
@@ -560,10 +608,9 @@ main {
     width: 100%;
     z-index: 1000;
   }
-  .header__nav a > img {
-    /* Config de la imagen en Responsive */
-    display: block;
-    margin: auto 50px;
+  .header__div {
+    /* Posicionamiento del logo de la página */
+    margin-left: 0px;
   }
   .header__label {
     /* Config del Botón */
@@ -653,6 +700,10 @@ main {
     width: 310px;
     margin: 1 auto;
   }
+  .section__img--nosotros {
+    /* Config de las imágenes de Nosotros */
+    margin-inline: 30px;
+  }
   /***** GALERÍA *****/
   .line {
     /* Línea decorativa */
@@ -699,6 +750,10 @@ main {
   .aside iframe:hover {
     /* Animación para los hover de los aside */
     transform: none;
+  }
+  .aside--nosotros {
+    /* Espaciado de los Aside de Nosotros */
+    margin-block: 1rem;
   }
   /***** PIE DE PÁGINA *****/
   .footer--grid {
@@ -773,6 +828,10 @@ main {
   }
   .section__div--img {
     flex-direction: column;
+  }
+  .section__img--nosotros {
+    /* Config de las imágenes de Nosotros */
+    float: none;
   }
   .section__responsive {
     /* Span dentro del section para su distribución correcta */

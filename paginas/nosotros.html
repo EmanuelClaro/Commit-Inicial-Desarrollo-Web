@@ -24,53 +24,58 @@
 
 <body>
 	<header class=" header">
-	<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
-		<nav class="header__nav">
-			<div class="header__container">
-				<a href="../index.html" class="header__logo"><img src="../multimedia/logos/pngegg.png"
-						alt="imagen del logo navbar"></a>
-				<label for="menu--responsive" class="header__label">
-					<i class="fa-solid fa-bars" class="header__icon"></i>
-				</label>
-				<input type="checkbox" id="menu--responsive" class="header__input">
-				<div class="header__nav--menu">
-					<ul>
-						<li><a href="../index.html" class="header__item"><i class="fa-solid fa-house"></i>Inicio</a>
-						</li>
-						<li><a href="#" class="header__item"><i class="fa-solid fa-star"></i>Colecciones<i
-									class="fa-solid fa-sort-down" id="down"></i></a>
-							<ul>
-								<li><a href="acceleracers.html" class="header__item"><i
-											class="fa-solid fa-arrow-right"></i>Cartas
-										AcceleRacers</a></li>
-								<li><a href="megarace.html" class="header__item"><i
-											class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
-								</li>
-								<li><a href="otrascartas.html" class="header__item"><i
-											class="fa-solid fa-arrow-right"></i>Otras
-										Colecciones</a>
-								</li>
-							</ul>
-						</li>
-						<li><a href="nosotros.html" class="header__item"><i class="fa-solid fa-user-group"></i>Sobre
-								Nosotros</a></li>
-						<li><a href="contacto.html" class="header__item"><i
-									class="fa-solid fa-envelope"></i>Contacto</a>
-						</li>
-					</ul>
+		<div class="nav--grid"> <!-- ACÁ EMPIEZA EL NAV -->
+			<nav class="header__nav">
+				<div class="header__container">
+					<div class="header__div">
+						<img class="header__svg" src="../multimedia/logos/Logo-2-sinmano.svg"
+							alt="imagen del logo navbar">
+						<a href="../index.html" class="header__logo">TCG HOT WHEELS</a>
+					</div>
+					<label for="menu--responsive" class="header__label">
+						<i class="fa-solid fa-bars" class="header__icon"></i>
+					</label>
+					<input type="checkbox" id="menu--responsive" class="header__input">
+					<div class="header__nav--menu">
+						<ul>
+							<li><a href="../index.html" class="header__item"><i class="fa-solid fa-house"></i>Inicio</a>
+							</li>
+							<li><a href="#" class="header__item"><i class="fa-solid fa-star"></i>Colecciones<i
+										class="fa-solid fa-sort-down" id="down"></i></a>
+								<ul>
+									<li><a href="acceleracers.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Cartas
+											AcceleRacers</a></li>
+									<li><a href="megarace.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Cartas Mega Race</a>
+									</li>
+									<li><a href="otrascartas.html" class="header__item"><i
+												class="fa-solid fa-arrow-right"></i>Otras
+											Colecciones</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="nosotros.html" class="header__item"><i class="fa-solid fa-user-group"></i>Sobre
+									Nosotros</a></li>
+							<li><a href="contacto.html" class="header__item"><i
+										class="fa-solid fa-envelope"></i>Contacto</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-		</nav>
-	</div> <!-- ACÁ TERMINA EL NAV-->
+			</nav>
+		</div> <!-- ACÁ TERMINA EL NAV-->
 
-	<div class="header--grid"> <!-- ACÁ EMPIEZA EL HEADER -->
-		<h1 class="header__h1">Mi breve <span class="header__responsive">Historia 😊</span></h1>
-	</div> <!-- ACÁ TERMINA EL HEADER -->
+		<div class="header--grid"> <!-- ACÁ EMPIEZA EL HEADER -->
+			<h1 class="header__h1">Mi breve <span class="header__responsive">Historia 😊</span></h1>
+		</div> <!-- ACÁ TERMINA EL HEADER -->
 	</header>
 	<main class="row align-middle">
 		<div class="article--grid col-xl-8"> <!-- ACÁ EMPIEZA EL ARTÍCULO PRINCIPAL -->
 			<article>
 				<section class="section">
+					<img class="section__img section__img--nosotros section__img--a"
+						src="../multimedia/nosotros/repisa-acrilico.jpg" alt="Colección de Hot Wheels Premiums">
 					<p class="section__text">¡Hola y bienvenidos a todos los coleccionistas, internautas y curiosos que
 						han llegado hasta esta
 						etapa! Mi nombre es Emanuel, y básicamente soy un <span class="italic">friki</span> que le gusta
@@ -99,6 +104,8 @@
 						mi
 						persona por las colecciones y la información bien presentada.</p>
 					<section class="section">
+						<img class="section__img section__img--nosotros section__img--b"
+							src="../multimedia/nosotros/colección-acc.jpg" alt="Colección de Cartas AcceleRacers">
 						<p class="section__text">No te distraigo mas ¡y te invito a que puedas navegar por las distintas
 							colecciones de la
 							página!.
@@ -119,7 +126,7 @@
 		</div> <!-- ACÁ TERMINA EL ARTÍCULO PRINCIPAL -->
 
 		<div class="aside--grid animate__animated animate__fadeInRight col-xl-4"> <!-- ACÁ EMPIEZA EL SIDE-CONTENT -->
-			<article class="aside">
+			<article class="aside aside--nosotros">
 				<p class="aside__text">Te inivito a que puedas visitar las siguientes páginas con contenido relacionado
 					a este blog:</p>
 				<div class="aside__div aside__div--img">
@@ -139,6 +146,15 @@
 				</div>
 				<a class="aside__link" href="https://acceleracers.fandom.com/wiki/Acceleracers_Collectible_Card_Game"
 					target="_blank">Hot Wheels Acceleracers</a>
+			</article>
+			<article class="aside aside--nosotros">
+				<p class="aside__text">Si quieres comenzar con tu colección, ¡te invito a que puedas visitar este sitio
+					web para sumar en tu filas esta increíble colección! Puedes dirigerte al siguiente enlace:</p>
+				<div class="aside__div aside__div--img">
+					<img class="aside__img" src="../multimedia/nosotros/ebay.png" alt="logo hw treasure">
+				</div>
+				<a class="aside__link" href="https://acortar.link/GedPKV" target="_blank">Hot Wheels AcceleRacers Cards</a>
+				<a class="aside__link" href="https://acortar.link/dV2C1d" target="_blank">Hot Wheels AcceleRacers Cards</a>
 			</article>
 		</div> <!-- ACÁ TERMINA EL SIDE-CONTENT -->
 	</main>
@@ -170,6 +186,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 		crossorigin="anonymous"></script>
-	</body>
+</body>
 
 </html>

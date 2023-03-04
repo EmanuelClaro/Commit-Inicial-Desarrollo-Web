@@ -44,7 +44,13 @@
 	}
 }
 .aside--megarace {
+	/* Posicionamiento del Aside Mega Race */
 	top: 80px
+}
+.aside--nosotros {
+	/* Config del Aside Nosotros */
+	position: inherit;
+	margin-block: 3rem;
 }
 .aside__h2 {
     /* Título de Contenido+ de los aside */

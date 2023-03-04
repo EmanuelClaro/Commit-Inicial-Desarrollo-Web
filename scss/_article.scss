@@ -54,6 +54,18 @@ main {
 	justify-content: center;
 	gap: 0;
 }
+.section__img--nosotros {
+	border: none;
+	border-radius: 25px;
+	margin-inline: 40px;
+}
+.section__img--a {
+	width: 350px;
+	float: right;
+}
+.section__img--b {
+	float: left;
+}
 .section__table {
     /* Config de la tabla del index */
 	max-width: 65vw;
