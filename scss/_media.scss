@@ -95,6 +95,13 @@
 		width: auto;
 		width: 600px;
 	}
+	.header__img--principal {
+		/* Config de la imagen de cabecera de Inicio */
+		width: 50%;
+	}
+	.header__img--otros {
+		width: 90%;
+	}
 	.header__h2 {
         /* Posicionamiento de los títulos y subtítulos */
 		text-align: center;
@@ -204,7 +211,7 @@
         /* Copyright */
 		display: block;
 	}
-	.footer__div--socialmedia {
+	.footer__socialmedia {
         /* Posicionamiento de los íconos de redes */
 		display: flex;
 		justify-content: center;
@@ -342,7 +349,7 @@
 		line-height: 30px;
 		margin: 0;
 	}
-	.footer__div--socialmedia {
+	.footer__socialmedia {
         /* Posicionamiento de los íconos de redes sociales */
 		flex-direction: column;
 		margin: 0;
