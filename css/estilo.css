@@ -393,9 +393,10 @@ main {
 /***** ESTILOS GENERALES PARA LOS ASIDE *****/
 .aside {
   /* Configs de los Contenido+ de las páginas (donde se encuentren) */
+  min-width: 100%;
   position: sticky;
   top: 25px;
-  margin: 10px;
+  margin-block: 10px;
   border: solid 2px #000;
   border-radius: 25px;
   display: flex;
