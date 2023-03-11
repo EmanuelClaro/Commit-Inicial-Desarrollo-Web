@@ -264,7 +264,7 @@ main {
 .section__img--li {
   /* Config de posicionamiento de las imágenes dentro de las listas */
   display: block;
-  margin: 10px 225px;
+  margin: 10px 14.0625rem;
 }
 
 .section__img--sm {
@@ -605,8 +605,24 @@ main {
     display: block;
   }
   .section__div--img img {
-    /* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+    /* Config de las imágenes demostrativas y de ejemplos en OtrasCartas */
     width: 350px;
+  }
+  .section__div--sm img {
+    /* config de las imagenes de SerieMaestra doble */
+    width: 280px;
+  }
+  .section__img--li {
+    /* Alineación de las imagenes dentro de las listas */
+    margin-inline: 10rem;
+  }
+  .section__img--sm {
+    /* Config de las imagenes de la lista en OtrasCartas */
+    width: 250px;
+  }
+  .section__img--lism {
+    /* Alineacion de las imagenes dentro de la lista de SerieMaestra */
+    margin-inline: 14.5rem;
   }
   .section__img--nosotros {
     /* Posicionamiento de lás imágenes en Nosotros */
@@ -617,8 +633,8 @@ main {
     max-width: 225px;
   }
   .aside {
-    /* Config Aside en Desktop 1366*768 */
-    top: 15px;
+    /* Config Aside en Desktop 1366*768 en Acceleracers */
+    top: 0.5rem;
   }
   .aside--megarace {
     /* Config Aside página MegaRace */
@@ -647,6 +663,10 @@ main {
   .aside__div--sound {
     /* Config de la playlist de Acceleracers */
     height: 80px;
+  }
+  .aside__link {
+    /* Tamaño de los links de Aside */
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 900px) {
