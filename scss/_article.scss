@@ -55,15 +55,18 @@ main {
 	gap: 0;
 }
 .section__img--nosotros {
+	/* Estilo y posicionamiento de lás imágenes en Nosotros */
 	border: none;
 	border-radius: 25px;
 	margin-inline: 40px;
 }
 .section__img--a {
+	/* Config de la imagen arriba del section en Nosotros */
 	width: 350px;
 	float: right;
 }
 .section__img--b {
+	/* Config de la imagen abajo del section en Nosotros */
 	float: left;
 }
 .section__table {

@@ -280,17 +280,20 @@ main {
 }
 
 .section__img--nosotros {
+  /* Estilo y posicionamiento de lás imágenes en Nosotros */
   border: none;
   border-radius: 25px;
   margin-inline: 40px;
 }
 
 .section__img--a {
+  /* Config de la imagen arriba del section en Nosotros */
   width: 350px;
   float: right;
 }
 
 .section__img--b {
+  /* Config de la imagen abajo del section en Nosotros */
   float: left;
 }
 
@@ -435,6 +438,11 @@ main {
 .aside--megarace {
   /* Posicionamiento del Aside Mega Race */
   top: 80px;
+}
+
+.aside--otrascartas {
+  /* Posicionamiento del Aside Otras Cartas */
+  top: 60px;
 }
 
 .aside--nosotros {
@@ -591,6 +599,56 @@ main {
 }
 
 /***** RESPONSIVE DESIGN *****/
+@media (max-width: 1400px) {
+  .header__responsive--desktop {
+    /* Span dentro del nombre del título para su distribución correcta */
+    display: block;
+  }
+  .section__div--img img {
+    /* Posicionamiento de las imágenes demostrativas y de ejemplos en OtrasCartas */
+    width: 350px;
+  }
+  .section__img--nosotros {
+    /* Posicionamiento de lás imágenes en Nosotros */
+    margin-inline: 20px;
+  }
+  .gallery img {
+    /* Tamaño de las Img en Responsive */
+    max-width: 225px;
+  }
+  .aside {
+    /* Config Aside en Desktop 1366*768 */
+    top: 15px;
+  }
+  .aside--megarace {
+    /* Config Aside página MegaRace */
+    top: 70px;
+  }
+  .aside--otrascartas {
+    /* Config Aside página Otras Cartas */
+    top: 40px;
+  }
+  .aside__div--img {
+    /* Config de imágenes del aside en 1366*768 */
+  }
+  .aside__div--img img {
+    width: 95px;
+  }
+  .aside__div--nosotros {
+    /* Config de imágenes del aside Nosotros */
+  }
+  .aside__div--nosotros img {
+    width: 110px;
+  }
+  .aside__div--video {
+    /* Config del video de Acceleracers */
+    height: 160px;
+  }
+  .aside__div--sound {
+    /* Config de la playlist de Acceleracers */
+    height: 80px;
+  }
+}
 @media (max-width: 900px) {
   .row {
     /* Reseteo de Bootstrap */
@@ -835,6 +893,7 @@ main {
     width: 300px;
   }
   .section__div--img {
+    /* Config de las imágenes pares */
     flex-direction: column;
   }
   .section__img--nosotros {
